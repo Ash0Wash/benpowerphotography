@@ -847,7 +847,7 @@ main {
 
 /* --- Section Header --- */
 .section-header {
-  padding: var(--section-pad) 0 1.5rem;
+  padding: 2rem 0 1.5rem;
 }
 
 .section-header h1 {
