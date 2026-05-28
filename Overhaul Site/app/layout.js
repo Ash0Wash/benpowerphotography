@@ -2,6 +2,8 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
 import ClientNav from './components/ClientNav';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -32,6 +34,8 @@ export default function RootLayout({ children }) {
             <div className="footer-copy">© {new Date().getFullYear()} Ben Power Photography. All rights reserved.</div>
           </div>
         </footer>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

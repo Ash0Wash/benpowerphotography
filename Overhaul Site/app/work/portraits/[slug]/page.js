@@ -4,10 +4,15 @@ import Link from 'next/link';
 import GalleryClient from '../../../components/GalleryClient';
 
 export async function generateStaticParams() {
-  const portraits = [
-    'kawai', 'brooke', 'kendi', 'slowtide', 'prom', 'animals'
-  ];
-  return portraits.map((slug) => ({ slug }));
+  const dirPath = path.join(process.cwd(), 'public', 'images', 'portraits');
+  try {
+    const folders = fs.readdirSync(dirPath, { withFileTypes: true })
+      .filter(dirent => dirent.isDirectory())
+      .map(dirent => dirent.name);
+    return folders.map((slug) => ({ slug }));
+  } catch (e) {
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }) {
