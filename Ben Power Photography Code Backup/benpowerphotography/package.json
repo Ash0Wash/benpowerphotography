@@ -1,0 +1,35 @@
+{
+  "name": "my-v0-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "generate:concert-manifest": "node scripts/generate-concert-photos-manifest.mjs",
+    "optimize:images": "node scripts/optimize-existing-images.mjs",
+    "dev": "next dev",
+    "build": "npm run generate:concert-manifest && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "^14.2.15",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "image-size": "^2.0.2",
+    "lucide-react": "^1.7.0",
+    "next": "^14.2.23",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-stack-grid": "^0.7.1",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-stack-grid": "^0.7.7",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
+  }
+}
