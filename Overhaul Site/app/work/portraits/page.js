@@ -3,7 +3,7 @@ import ProtectedImage from '../../components/ProtectedImage';
 
 export const metadata = { title: 'Portraits | Work | Ben Power Photography' };
 
-const portraits = [
+export const portraits = [
   { name: 'Kawai', slug: 'kawai', cover: '/images/portraits/kawai/cover.webp' },
   { name: 'Brooke', slug: 'brooke', cover: '/images/portraits/brooke/cover.jpg' },
   { name: 'Kendi', slug: 'kendi', cover: '/images/portraits/kendi/cover.jpg' },

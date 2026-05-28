@@ -3,7 +3,7 @@ import ProtectedImage from '../../components/ProtectedImage';
 
 export const metadata = { title: 'Concerts | Work | Ben Power Photography' };
 
-const concerts = [
+export const concerts = [
   { name: 'Bibi @ Sogang', slug: 'bibi-sogang', cover: '/images/concerts/bibi-sogang/cover.webp', imgStyle: { objectPosition: 'top' } },
   { name: 'Yena @ Sogang', slug: 'yena-sogang', cover: '/images/concerts/yena-sogang/cover.webp', imgStyle: { objectPosition: 'center 40%' } },
   { name: 'Maggie Lindemann & Ayleen Valentine', slug: 'maggie-lindemann', cover: '/images/concerts/maggie-lindemann/cover.webp' },

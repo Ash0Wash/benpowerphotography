@@ -1,10 +1,15 @@
 import Link from 'next/link';
 import ProtectedImage from './components/ProtectedImage';
 import HeroBackground from './components/HeroBackground';
-import { getAllThumbnails } from './utils/getThumbnails';
+import { concerts } from './work/concerts/page';
+import { portraits } from './work/portraits/page';
 
 export default function Home() {
-  const images = getAllThumbnails();
+  const recentConcerts = concerts.slice(0, 7);
+  const images = [...recentConcerts, ...portraits].map(item => ({
+    src: item.cover,
+    objectPosition: item.imgStyle?.objectPosition || 'center'
+  }));
 
   return (
     <div>
