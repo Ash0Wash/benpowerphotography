@@ -58,7 +58,7 @@ export default function ClientNav() {
         <Link href="/about" className={`mobile-nav-link ${pathname === '/about' ? 'active' : ''}`}>About</Link>
         <Link href="/contact" className={`mobile-nav-link ${pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
         <div className="mobile-nav-socials">
-          <a href="https://instagram.com/benpowerphoto" target="_blank" rel="noopener noreferrer" className="nav-social-link">
+          <a href="https://instagram.com/benpowerphoto" target="_blank" rel="noopener noreferrer" className="mobile-nav-link">
             Instagram
           </a>
         </div>
