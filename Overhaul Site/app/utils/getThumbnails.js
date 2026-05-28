@@ -33,7 +33,7 @@ export function getAllThumbnails() {
       if (coverFile) {
         let objPos = 'center';
         if (folder === 'bibi-sogang') objPos = 'top';
-        if (folder === 'yena-sogang') objPos = 'center 30%';
+        if (folder === 'yena-sogang') objPos = 'center 40%';
 
         images.push({
           src: `/images/${category}/${folder}/${coverFile}`,
