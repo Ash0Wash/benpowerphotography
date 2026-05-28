@@ -1,13 +1,16 @@
 import Link from 'next/link';
 import ProtectedImage from './components/ProtectedImage';
 import HeroBackground from './components/HeroBackground';
+import { getAllThumbnails } from './utils/getThumbnails';
 
 export default function Home() {
+  const images = getAllThumbnails();
+
   return (
     <div>
       <section className="hero">
         <div className="hero-bg">
-          <HeroBackground />
+          <HeroBackground images={images} />
         </div>
         <div className="hero-content">
           <p className="hero-subtitle">Los Angeles / San Diego</p>

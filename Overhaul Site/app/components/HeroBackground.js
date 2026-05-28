@@ -3,34 +3,28 @@
 import { useState, useEffect } from 'react';
 import ProtectedImage from './ProtectedImage';
 
-const backgroundImages = [
-  { src: "/images/concerts/panchiko/cover.jpg", objectPosition: 'center' },
-  { src: "/images/concerts/maggie-lindemann/cover.webp", objectPosition: 'center' },
-  { src: "/images/concerts/ari/cover.jpg", objectPosition: 'center' },
-  { src: "/images/concerts/bibi-sogang/cover.webp", objectPosition: 'top' },
-  { src: "/images/portraits/brooke/cover.jpg", objectPosition: 'center' },
-  { src: "/images/portraits/kawai/cover.webp", objectPosition: 'center' },
-  { src: "/images/street-photography/cover.jpg", objectPosition: 'center' }
-];
-
-export default function HeroBackground() {
-  const [bgIndex, setBgIndex] = useState(0);
+export default function HeroBackground({ images }) {
+  const [bg, setBg] = useState(null);
 
   useEffect(() => {
-    // Pick a random index between 0 and backgroundImages.length - 1
-    const randomIndex = Math.floor(Math.random() * backgroundImages.length);
-    setBgIndex(randomIndex);
-  }, []);
+    if (!images || images.length === 0) return;
+    const randomIndex = Math.floor(Math.random() * images.length);
+    setBg(images[randomIndex]);
+  }, [images]);
 
-  const bg = backgroundImages[bgIndex];
+  if (!bg) {
+    return <div style={{ width: '100%', height: '100%', backgroundColor: 'var(--bg-primary)' }} />;
+  }
 
   return (
-    <ProtectedImage 
-      src={bg.src}
-      alt="Hero background"
-      fill
-      priority
-      imgStyle={{ objectPosition: bg.objectPosition }}
-    />
+    <div style={{ width: '100%', height: '100%', animation: 'fadeIn 0.6s ease-in' }}>
+      <ProtectedImage 
+        src={bg.src}
+        alt="Hero background"
+        fill
+        priority
+        imgStyle={{ objectPosition: bg.objectPosition }}
+      />
+    </div>
   );
 }
