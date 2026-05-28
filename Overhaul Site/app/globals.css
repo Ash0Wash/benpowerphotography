@@ -450,7 +450,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: clamp(1rem, 2vw, 1.5rem);
-  padding: var(--section-pad) 0;
+  padding-bottom: var(--section-pad);
 }
 
 .category-card {
@@ -711,7 +711,7 @@ main {
   display: flex;
   gap: clamp(2rem, 5vw, 5rem);
   align-items: center;
-  padding: var(--section-pad) 0;
+  padding-bottom: var(--section-pad);
 }
 
 .about-image-wrapper {
@@ -744,7 +744,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 5vw, 5rem);
-  padding: var(--section-pad) 0;
+  padding-bottom: var(--section-pad);
   align-items: start;
 }
 
