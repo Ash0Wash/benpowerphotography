@@ -1,17 +1,13 @@
 import Link from 'next/link';
 import ProtectedImage from './components/ProtectedImage';
+import HeroBackground from './components/HeroBackground';
 
 export default function Home() {
   return (
     <div>
       <section className="hero">
         <div className="hero-bg">
-          <ProtectedImage 
-            src="/images/concerts/bibi-sogang/cover.webp"
-            alt="Hero background"
-            fill
-            priority
-          />
+          <HeroBackground />
         </div>
         <div className="hero-content">
           <p className="hero-subtitle">Los Angeles / San Diego</p>

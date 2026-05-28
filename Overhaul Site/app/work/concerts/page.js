@@ -4,7 +4,7 @@ import ProtectedImage from '../../components/ProtectedImage';
 export const metadata = { title: 'Concerts | Work | Ben Power Photography' };
 
 const concerts = [
-  { name: 'Bibi @ Sogang', slug: 'bibi-sogang', cover: '/images/concerts/bibi-sogang/cover.webp' },
+  { name: 'Bibi @ Sogang', slug: 'bibi-sogang', cover: '/images/concerts/bibi-sogang/cover.webp', imgStyle: { objectPosition: 'top' } },
   { name: 'Yena @ Sogang', slug: 'yena-sogang', cover: '/images/concerts/yena-sogang/cover.webp' },
   { name: 'Maggie Lindemann & Ayleen Valentine', slug: 'maggie-lindemann', cover: '/images/concerts/maggie-lindemann/cover.webp' },
   { name: 'Snow Strippers @ SOMA', slug: 'snowstrippers', cover: '/images/concerts/snowstrippers/cover.jpg' },
@@ -40,7 +40,7 @@ export default function Concerts() {
         {concerts.map((c) => (
           <Link href={`/work/concerts/${c.slug}`} className="sub-gallery-card" key={c.slug}>
             <div className="sub-gallery-card-image" style={{ position: 'relative' }}>
-               <ProtectedImage src={c.cover} alt={c.name} fill />
+               <ProtectedImage src={c.cover} alt={c.name} fill imgStyle={c.imgStyle} />
             </div>
             <div className="sub-gallery-card-info">
               <h3 className="sub-gallery-card-title">{c.name}</h3>
