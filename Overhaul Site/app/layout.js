@@ -2,6 +2,7 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
 import ClientNav from './components/ClientNav';
+import ScrollToTop from './components/ScrollToTop';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react";
 
@@ -27,7 +28,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable}`}>
         <ClientNav />
-        <main>{children}</main>
+        <main>
+          {children}
+        </main>
+        <ScrollToTop />
         <footer className="footer">
           <div className="footer-inner">
             <a href="mailto:contact@benpowerphotography.com" className="footer-email">contact@benpowerphotography.com</a>
