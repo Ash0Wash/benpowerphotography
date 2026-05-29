@@ -26,7 +26,7 @@ export default function GalleryClient({ images, folderPath, title }) {
     <>
       <Masonry>
         {formattedImages.map((img, index) => (
-          <div key={index} onClick={() => openLightbox(index)} style={{ cursor: 'pointer', borderRadius: '4px', overflow: 'hidden', position: 'relative' }}>
+          <div key={index} onClick={() => openLightbox(index)} style={{ cursor: 'pointer', borderRadius: '4px', overflow: 'hidden', position: 'relative', minHeight: '150px', backgroundColor: 'var(--bg-secondary)' }}>
             <ProtectedImage 
               src={img.src} 
               alt={img.alt} 
@@ -34,6 +34,7 @@ export default function GalleryClient({ images, folderPath, title }) {
               height={0} 
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               unoptimized
+              priority={index < 6}
               imgStyle={{ width: '100%', height: 'auto', display: 'block' }} 
               style={{ width: '100%', height: 'auto', display: 'block' }}
             />
