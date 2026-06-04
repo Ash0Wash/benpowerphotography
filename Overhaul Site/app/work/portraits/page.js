@@ -23,9 +23,6 @@ export default function Portraits() {
           <Link href="/work">Work</Link> <span className="breadcrumb-separator">/</span> <span>Portraits</span>
         </div>
         <h1>Portraits & Events</h1>
-        <p style={{ maxWidth: '800px', margin: '1rem auto 2rem', color: 'var(--text-secondary, #666)', lineHeight: '1.6' }}>
-          Whether you need a stylized editorial shoot, artist press photos, or dynamic event coverage, my portrait and event photography is designed to stand out. Based in San Diego and heavily active in Los Angeles, I collaborate with clients to create unique, aesthetic-driven imagery. My sessions are tailored to showcase your authentic personality and brand, perfect for musicians needing fresh promo material or individuals looking for high-quality, creative captures.
-        </p>
       </div>
       <div className="sub-gallery-grid">
         {portraits.map((p) => (
@@ -38,6 +35,12 @@ export default function Portraits() {
             </div>
           </Link>
         ))}
+      </div>
+
+      <div className="seo-content" style={{ marginTop: '6rem', padding: '2rem', background: 'var(--bg-secondary, transparent)', borderTop: '1px solid var(--border-color, #eaeaea)', textAlign: 'center' }}>
+        <p style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.6', color: 'var(--text-secondary, #666)' }}>
+          I love shooting creative, stylized portraits that let your personality shine. Whether you're an artist looking for fresh press photos, or you just want some really cool shots, I keep the vibe relaxed and the results highly aesthetic. While I do a lot of these in LA and San Diego, I'm always down to travel if you've got an interesting concept in mind.
+        </p>
       </div>
     </div>
   );

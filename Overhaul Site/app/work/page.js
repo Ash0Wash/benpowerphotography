@@ -18,9 +18,6 @@ export default function Work() {
     <div className="container">
       <div className="section-header">
         <h1>Work</h1>
-        <p style={{ maxWidth: '800px', margin: '1rem auto 2rem', color: 'var(--text-secondary, #666)', lineHeight: '1.6' }}>
-          Dive into my diverse body of work spanning the vibrant music scenes and diverse environments of Los Angeles and San Diego. As a freelance photographer focused on the entertainment industry, I collaborate with musicians, publicists, and management teams to produce striking visual narratives. From the high-voltage atmosphere of live concerts and private events to meticulously styled portrait sessions, explore the galleries below to see how I bring creative visions to life.
-        </p>
       </div>
       <div className="category-grid">
         {categories.map((cat) => (
@@ -35,6 +32,12 @@ export default function Work() {
             </div>
           </Link>
         ))}
+      </div>
+      
+      <div className="seo-content" style={{ marginTop: '6rem', padding: '2rem', background: 'var(--bg-secondary, transparent)', borderTop: '1px solid var(--border-color, #eaeaea)', textAlign: 'center' }}>
+        <p style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.6', color: 'var(--text-secondary, #666)' }}>
+          Whether I'm in the photo pit at a sold-out show in LA or shooting a creative portrait session down in San Diego, I'm all about capturing authentic energy and style. Take a look through the galleries above to see some of my favorite shots across live music, portraits, and street photography.
+        </p>
       </div>
     </div>
   );

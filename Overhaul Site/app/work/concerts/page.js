@@ -38,9 +38,6 @@ export default function Concerts() {
           <Link href="/work">Work</Link> <span className="breadcrumb-separator">/</span> <span>Concerts</span>
         </div>
         <h1>Concerts</h1>
-        <p style={{ maxWidth: '800px', margin: '1rem auto 2rem', color: 'var(--text-secondary, #666)', lineHeight: '1.6' }}>
-          Live music is about energy, emotion, and connection. As a specialized Los Angeles concert photographer, I work with artists, publicists, and tour management to document performances with authenticity and grit. From iconic LA venues like The Echo and House of Blues to massive outdoor festivals like Ohana Fest, my concert photography captures the decisive moments that define a live show. Whether you need tour coverage, press assets, or social media content, my goal is to visually translate the sound and atmosphere of your performance.
-        </p>
       </div>
       <div className="sub-gallery-grid">
         {concerts.map((c) => (
@@ -53,6 +50,12 @@ export default function Concerts() {
             </div>
           </Link>
         ))}
+      </div>
+
+      <div className="seo-content" style={{ marginTop: '6rem', padding: '2rem', background: 'var(--bg-secondary, transparent)', borderTop: '1px solid var(--border-color, #eaeaea)', textAlign: 'center' }}>
+        <p style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.6', color: 'var(--text-secondary, #666)' }}>
+          I thrive on the chaos and energy of live music. Whether it's an intimate underground set at an LA dive bar or a massive festival stage in San Diego, my goal is to capture the raw, unfiltered vibe of the show. I work with artists, managers, and publicists to deliver photos that really make you feel like you were there.
+        </p>
       </div>
     </div>
   );
