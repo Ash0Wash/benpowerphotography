@@ -62,7 +62,7 @@ export const metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ben Power Photography - Los Angeles Concert, Event & Portrait Photographer',
+        alt: 'Ben Power Photography in Los Angeles for Concerts, Events & Portraits',
       },
     ],
   },
@@ -75,7 +75,7 @@ export const metadata = {
   },
 };
 
-// JSON-LD Person schema - tells Google, AI search, and Knowledge Graph exactly who Ben Power is
+// JSON-LD Person schema: tells Google, AI search, and Knowledge Graph exactly who Ben Power is
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -109,13 +109,13 @@ const personSchema = {
   description: 'Ben Power is a Los Angeles and San Diego based photographer specializing in live music concert photography, portraiture, and event coverage. He collaborates with musicians, publicists, and management teams in the entertainment industry.',
 };
 
-// JSON-LD WebSite schema - enables Google Sitelinks Search Box and confirms site identity
+// JSON-LD WebSite schema: enables Google Sitelinks Search Box and confirms site identity
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Ben Power Photography',
   url: 'https://www.benpowerphotography.com',
-  description: 'Portfolio of Ben Power - Los Angeles and San Diego concert, event, and portrait photographer.',
+  description: 'Portfolio of Ben Power, a Los Angeles and San Diego concert, event, and portrait photographer.',
   author: {
     '@type': 'Person',
     name: 'Ben Power',
