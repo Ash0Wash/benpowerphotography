@@ -69,7 +69,7 @@ export default function Home() {
             <strong style={{ color: 'var(--text-primary, #333)' }}>Stylized Portraits & Events:</strong> Beyond the stage, I offer creative and stylized portrait sessions tailored for musicians, models, and individuals looking for a distinct visual identity. From editorial band shoots to energetic party and event photography, I ensure every frame tells a compelling story. 
           </p>
           <p style={{ lineHeight: '1.6', color: 'var(--text-secondary, #666)' }}>
-            Explore my portfolio to see my latest work. While I primarily work out of Los Angeles and San Diego, I love traveling the world and am always open to global commissions and destination projects. If your vision is taking you somewhere exciting, let's discuss travel logistics and create something unforgettable anywhere on the map.
+            Feel free to look around the portfolio to see my latest work. While I spend most of my time shooting in LA and San Diego, I'm always looking for an excuse to travel. If you've got an exciting project somewhere else in the world, just get me there and we'll create something amazing together.
           </p>
         </div>
       </section>
