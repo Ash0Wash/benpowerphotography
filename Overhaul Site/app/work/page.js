@@ -23,7 +23,7 @@ export default function Work() {
         {categories.map((cat) => (
           <Link href={`/work/${cat.slug}`} className="category-card" key={cat.slug}>
             <div className="category-card-image" style={{ width: '100%', height: '100%', position: 'relative' }}>
-               <ProtectedImage src={cat.cover} alt={cat.name} fill />
+              <ProtectedImage src={cat.cover} alt={cat.name} fill />
             </div>
             <div className="category-card-overlay"></div>
             <div className="category-card-content">
@@ -33,10 +33,10 @@ export default function Work() {
           </Link>
         ))}
       </div>
-      
-      <div className="seo-content" style={{ marginTop: '6rem', padding: '2rem', background: 'var(--bg-secondary, transparent)', borderTop: '1px solid var(--border-color, #eaeaea)', textAlign: 'center' }}>
+
+      <div className="seo-content" style={{ padding: '2rem', background: 'var(--bg-secondary, transparent)', borderTop: '1px solid var(--border-color, #eaeaea)', textAlign: 'center' }}>
         <p style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.6', color: 'var(--text-secondary, #666)' }}>
-          Whether I'm in the photo pit at a sold-out show in LA or shooting a creative portrait session down in San Diego, I'm all about capturing authentic energy and style. Take a look through the galleries above to see some of my favorite shots across live music, portraits, and street photography.
+          Whether I'm in the photo pit at a sold-out show or taking some stylized portrait photos, I'm all about capturing emotion and energy. Take a look through the galleries above to see some of my favorite shots across live music, portraits, and street photography.
         </p>
       </div>
     </div>
