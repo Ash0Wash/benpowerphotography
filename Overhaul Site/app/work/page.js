@@ -2,8 +2,8 @@ import Link from 'next/link';
 import ProtectedImage from '../components/ProtectedImage';
 
 export const metadata = {
-  title: 'Work | Ben Power Photography',
-  description: 'Browse concert photography, portraits, street photography, and automotive photography by Ben Power.',
+  title: 'Portfolio | Ben Power Photography | LA & San Diego',
+  description: 'Browse the diverse photography portfolio of Ben Power, featuring live concerts, stylized portraits, events, and street photography across Los Angeles and San Diego.',
 };
 
 const categories = [
@@ -18,6 +18,9 @@ export default function Work() {
     <div className="container">
       <div className="section-header">
         <h1>Work</h1>
+        <p style={{ maxWidth: '800px', margin: '1rem auto 2rem', color: 'var(--text-secondary, #666)', lineHeight: '1.6' }}>
+          Dive into my diverse body of work spanning the vibrant music scenes and diverse environments of Los Angeles and San Diego. As a freelance photographer focused on the entertainment industry, I collaborate with musicians, publicists, and management teams to produce striking visual narratives. From the high-voltage atmosphere of live concerts and private events to meticulously styled portrait sessions, explore the galleries below to see how I bring creative visions to life.
+        </p>
       </div>
       <div className="category-grid">
         {categories.map((cat) => (

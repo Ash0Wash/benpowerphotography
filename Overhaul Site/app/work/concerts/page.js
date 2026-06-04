@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import ProtectedImage from '../../components/ProtectedImage';
 
-export const metadata = { title: 'Concerts | Work | Ben Power Photography' };
+export const metadata = { 
+  title: 'Los Angeles Concert Photographer | Live Music Portfolio | Ben Power',
+  description: 'Explore live music and concert photography by Ben Power. Serving musicians, publicists, and management in Los Angeles and San Diego.' 
+};
 
 export const concerts = [
   { name: 'Bibi @ Sogang', slug: 'bibi-sogang', cover: '/images/concerts/bibi-sogang/cover.webp', imgStyle: { objectPosition: 'top' } },
@@ -35,12 +38,15 @@ export default function Concerts() {
           <Link href="/work">Work</Link> <span className="breadcrumb-separator">/</span> <span>Concerts</span>
         </div>
         <h1>Concerts</h1>
+        <p style={{ maxWidth: '800px', margin: '1rem auto 2rem', color: 'var(--text-secondary, #666)', lineHeight: '1.6' }}>
+          Live music is about energy, emotion, and connection. As a specialized Los Angeles concert photographer, I work with artists, publicists, and tour management to document performances with authenticity and grit. From iconic LA venues like The Echo and House of Blues to massive outdoor festivals like Ohana Fest, my concert photography captures the decisive moments that define a live show. Whether you need tour coverage, press assets, or social media content, my goal is to visually translate the sound and atmosphere of your performance.
+        </p>
       </div>
       <div className="sub-gallery-grid">
         {concerts.map((c) => (
           <Link href={`/work/concerts/${c.slug}`} className="sub-gallery-card" key={c.slug}>
             <div className="sub-gallery-card-image" style={{ position: 'relative' }}>
-               <ProtectedImage src={c.cover} alt={c.name} fill imgStyle={c.imgStyle} />
+               <ProtectedImage src={c.cover} alt={`Los Angeles Concert Photography - ${c.name}`} fill imgStyle={c.imgStyle} />
             </div>
             <div className="sub-gallery-card-info">
               <h3 className="sub-gallery-card-title">{c.name}</h3>
