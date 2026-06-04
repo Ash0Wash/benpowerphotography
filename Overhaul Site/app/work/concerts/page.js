@@ -54,7 +54,7 @@ export default function Concerts() {
 
       <div className="seo-content" style={{ marginTop: '6rem', padding: '2rem', background: 'var(--bg-secondary, transparent)', borderTop: '1px solid var(--border-color, #eaeaea)', textAlign: 'center' }}>
         <p style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.6', color: 'var(--text-secondary, #666)' }}>
-          I thrive on the chaos and energy of live music. Whether it's an intimate underground set at an LA dive bar or a massive festival stage in San Diego, my goal is to capture the raw, unfiltered vibe of the show. I work with artists, managers, and publicists to deliver photos that really make you feel like you were there.
+          I thrive on the chaos and energy of live music. Whether it's an intimate underground set at an LA dive bar or a massive festival stage in San Diego, my goal is to capture the true, unfiltered vibe of the show. I work with artists, managers, and publicists to deliver photos that really make you feel like you were there.
         </p>
       </div>
     </div>

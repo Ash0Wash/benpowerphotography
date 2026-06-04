@@ -39,7 +39,7 @@ export default function Portraits() {
 
       <div className="seo-content" style={{ marginTop: '6rem', padding: '2rem', background: 'var(--bg-secondary, transparent)', borderTop: '1px solid var(--border-color, #eaeaea)', textAlign: 'center' }}>
         <p style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.6', color: 'var(--text-secondary, #666)' }}>
-          I love shooting creative, stylized portraits that let your personality shine. Whether you're an artist looking for fresh press photos, or you just want some really cool shots, I keep the vibe relaxed and the results highly aesthetic. While I do a lot of these in LA and San Diego, I'm always down to travel if you've got an interesting concept in mind.
+          I love shooting creative portraits that let your personality shine. Whether you're an artist looking for fresh press photos, or you just want some really cool shots, I keep the vibe relaxed and the results looking great. While I do a lot of these in LA and San Diego, I'm always down to travel if you've got an interesting concept in mind.
         </p>
       </div>
     </div>

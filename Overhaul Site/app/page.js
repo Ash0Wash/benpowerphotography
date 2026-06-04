@@ -60,13 +60,13 @@ export default function Home() {
         <div className="seo-content" style={{ marginTop: '8rem', padding: '2rem', background: 'var(--bg-secondary, transparent)', borderTop: '1px solid var(--border-color, #eaeaea)' }}>
           <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Los Angeles & San Diego Concert, Event, and Portrait Photographer</h2>
           <p style={{ marginBottom: '1rem', lineHeight: '1.6', color: 'var(--text-secondary, #666)' }}>
-            Welcome to Ben Power Photography. Specializing in high-energy live music photography, stylized portraiture, and dynamic event coverage, I work closely with musicians, publicists, management teams, and private clients across Southern California. While based in San Diego, my lens is heavily focused on the vibrant Los Angeles music and entertainment industry.
+            Welcome to Ben Power Photography. Specializing in high-energy live music photography, creative portraiture, and event coverage, I work closely with musicians, publicists, management teams, and private clients across Southern California. While based in San Diego, my lens is heavily focused on the vibrant Los Angeles music and entertainment industry.
           </p>
           <p style={{ marginBottom: '1rem', lineHeight: '1.6', color: 'var(--text-secondary, #666)' }}>
-            <strong style={{ color: 'var(--text-primary, #333)' }}>Live Music & Concert Photography:</strong> Whether it's an intimate underground show in an LA dive bar or a massive festival stage, my goal is to capture the raw, unfiltered energy of the performance. I provide artists and their management with compelling visual assets that elevate their brand and connect with fans.
+            <strong style={{ color: 'var(--text-primary, #333)' }}>Live Music & Concert Photography:</strong> Whether it's an intimate underground show in an LA dive bar or a massive festival stage, my goal is to capture the true, unfiltered energy of the performance. I provide artists and their management with strong visual assets that build their brand and connect with fans.
           </p>
           <p style={{ marginBottom: '1rem', lineHeight: '1.6', color: 'var(--text-secondary, #666)' }}>
-            <strong style={{ color: 'var(--text-primary, #333)' }}>Stylized Portraits & Events:</strong> Beyond the stage, I offer creative and stylized portrait sessions tailored for musicians, models, and individuals looking for a distinct visual identity. From editorial band shoots to energetic party and event photography, I ensure every frame tells a compelling story. 
+            <strong style={{ color: 'var(--text-primary, #333)' }}>Portraits & Events:</strong> Beyond the stage, I offer creative portrait sessions built for musicians, models, and individuals looking for a distinct visual identity. From editorial band shoots to energetic party and event photography, I ensure every frame tells a great story. 
           </p>
           <p style={{ lineHeight: '1.6', color: 'var(--text-secondary, #666)' }}>
             Feel free to look around the portfolio to see my latest work. While I spend most of my time shooting in LA and San Diego, I'm always looking for an excuse to travel. If you've got an exciting project somewhere else in the world, just get me there and we'll create something amazing together.

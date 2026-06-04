@@ -69,7 +69,7 @@ export default function About() {
           <div className="about-image-wrapper" style={{ position: 'relative', height: '600px' }}>
             <ProtectedImage
               src="/images/misc/about-barn.jpg"
-              alt="Ben Power Photography — Los Angeles concert and portrait photographer"
+              alt="Ben Power Photography - Los Angeles concert and portrait photographer"
               fill
             />
           </div>
@@ -81,7 +81,7 @@ export default function About() {
             </p>
             <p className="about-detail">
               His photography has been featured in multiple art shows across Los Angeles, San Diego,
-              and Ventura — bringing his distinctive visual style to audiences throughout Southern
+              and Ventura - bringing his distinctive visual style to audiences throughout Southern
               California and beyond.
             </p>
           </div>
@@ -91,20 +91,20 @@ export default function About() {
           <div className="about-image-wrapper" style={{ position: 'relative', height: '600px' }}>
             <ProtectedImage
               src="/images/misc/about-streetlight.jpg"
-              alt="Ben Power street photography — Los Angeles"
+              alt="Ben Power street photography - Los Angeles"
               fill
             />
           </div>
           <div className="about-text">
             <p className="about-bio" style={{ marginBottom: '1.5rem' }}>
               Ben specializes in live music and concert photography, having covered 20+ shows at
-              venues across Los Angeles and San Diego. His ability to freeze the raw energy of a
-              live performance — the motion, the light, the emotion — defines his approach to
+              venues across Los Angeles and San Diego. His ability to freeze the true energy of a
+              live performance - the motion, the light, the emotion - defines his approach to
               every shoot.
             </p>
             <p className="about-detail">
               Whether shooting portraits, concerts, or the streets of California, Ben Power
-              Photography brings technical precision and an eye for authentic moments to every
+              Photography brings technical precision and an eye for real moments to every
               project. Based in Los Angeles, available globally.
             </p>
             <p className="about-detail" style={{ marginTop: '1rem' }}>
