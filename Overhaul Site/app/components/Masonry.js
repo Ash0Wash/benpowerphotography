@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Masonry({ children, columnsObj = { default: 3, 1024: 2, 640: 1 } }) {
   const [columns, setColumns] = useState(columnsObj.default);
@@ -23,7 +23,7 @@ export default function Masonry({ children, columnsObj = { default: 3, 1024: 2, 
   const columnArrays = Array.from({ length: columns }, () => []);
   
   // React.Children.toArray is needed to safely iterate over children
-  const childrenArray = Array.isArray(children) ? children : [children];
+  const childrenArray = React.Children.toArray(children);
   
   childrenArray.forEach((child, index) => {
     if (!child) return;
