@@ -8,10 +8,16 @@ export default function GalleryClient({ images, folderPath, title }) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const formattedImages = images.map(img => ({
-    src: `${folderPath}/${img}`,
-    alt: `${title} - photo`
-  }));
+  const formattedImages = images.map(img => {
+    // Check if img is an object (new behavior) or string (old behavior fallback)
+    const isObj = typeof img === 'object';
+    return {
+      src: isObj ? `${folderPath}/${img.src}` : `${folderPath}/${img}`,
+      width: isObj ? img.width : 0,
+      height: isObj ? img.height : 0,
+      alt: `${title} - photo`
+    };
+  });
 
   const openLightbox = (index) => {
     setCurrentIndex(index);
@@ -25,21 +31,24 @@ export default function GalleryClient({ images, folderPath, title }) {
   return (
     <>
       <Masonry>
-        {formattedImages.map((img, index) => (
-          <div key={index} onClick={() => openLightbox(index)} style={{ cursor: 'pointer', borderRadius: '4px', overflow: 'hidden', position: 'relative', minHeight: '150px', backgroundColor: 'var(--bg-secondary)' }}>
-            <ProtectedImage 
-              src={img.src} 
-              alt={img.alt} 
-              width={0} 
-              height={0} 
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              unoptimized
-              priority={true}
-              imgStyle={{ width: '100%', height: 'auto', display: 'block' }} 
-              style={{ width: '100%', height: 'auto', display: 'block' }}
-            />
-          </div>
-        ))}
+        {formattedImages.map((img, index) => {
+          const aspectRatio = img.width && img.height ? `${img.width} / ${img.height}` : 'auto';
+          return (
+            <div key={index} onClick={() => openLightbox(index)} style={{ cursor: 'pointer', borderRadius: '4px', overflow: 'hidden', position: 'relative', aspectRatio, backgroundColor: 'var(--bg-secondary)' }}>
+              <ProtectedImage 
+                src={img.src} 
+                alt={img.alt} 
+                width={img.width} 
+                height={img.height} 
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                unoptimized
+                priority={true}
+                imgStyle={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }} 
+                style={{ width: '100%', height: '100%', display: 'block' }}
+              />
+            </div>
+          );
+        })}
       </Masonry>
       <Lightbox 
         images={formattedImages}
