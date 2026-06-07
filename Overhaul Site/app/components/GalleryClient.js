@@ -34,7 +34,7 @@ export default function GalleryClient({ images, folderPath, title }) {
               height={0} 
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               unoptimized
-              priority={index < 6}
+              priority={true}
               imgStyle={{ width: '100%', height: 'auto', display: 'block' }} 
               style={{ width: '100%', height: 'auto', display: 'block' }}
             />
