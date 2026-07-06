@@ -304,7 +304,7 @@ export default function PressClient({ initialImages }) {
           display: 'inline-block',
           marginTop: '0.5rem'
         }}>
-          ben@benpowerphotography.com
+          contact@benpowerphotography.com
         </a>
       </div>
     </div>
