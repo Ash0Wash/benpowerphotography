@@ -2,19 +2,17 @@
 
 import { useState } from 'react';
 import ProtectedImage from '../components/ProtectedImage';
+import Lightbox from '../components/Lightbox';
 
 export default function PressClient({ initialImages }) {
   const [images, setImages] = useState(initialImages);
   const [dragMode, setDragMode] = useState('row');
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
   
   // A simple password or just local env check is done on the server,
   // but to avoid accidental clicks we can prompt the user to confirm.
   const handleDelete = async (imagePath) => {
-    if (process.env.NODE_ENV !== 'development') {
-      alert('Hiding images is only allowed in development mode.');
-      return;
-    }
-    
     if (window.confirm('Are you sure you want to remove this image from the press page? It will not be deleted from disk.')) {
       try {
         const response = await fetch('/api/delete-image', {
@@ -35,6 +33,18 @@ export default function PressClient({ initialImages }) {
         }
       } catch (err) {
         alert('Error deleting image: ' + err.message);
+      }
+    }
+  };
+
+  const handleImageClick = (imgSrc) => {
+    if (process.env.NODE_ENV === 'development') {
+      handleDelete(imgSrc);
+    } else {
+      const index = images.findIndex(img => img.src === imgSrc);
+      if (index !== -1) {
+        setLightboxIndex(index);
+        setLightboxOpen(true);
       }
     }
   };
@@ -230,7 +240,7 @@ export default function PressClient({ initialImages }) {
                   <div 
                     key={img.src} 
                     className={isHorizontal ? 'press-item-horizontal' : 'press-item-vertical'}
-                    onClick={() => handleDelete(img.src)}
+                    onClick={() => handleImageClick(img.src)}
                     draggable={process.env.NODE_ENV === 'development' && dragMode === 'individual'}
                     onDragStart={(e) => {
                       if (process.env.NODE_ENV === 'development' && dragMode === 'individual') {
@@ -304,9 +314,18 @@ export default function PressClient({ initialImages }) {
           display: 'inline-block',
           marginTop: '0.5rem'
         }}>
-          contact@benpowerphotography.com
+          ben@benpowerphotography.com
         </a>
       </div>
+
+      <Lightbox 
+        images={images.map(img => ({ src: img.src, alt: 'Press Image' }))}
+        currentIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onPrev={() => setLightboxIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1))}
+        onNext={() => setLightboxIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0))}
+      />
     </div>
   );
 }
