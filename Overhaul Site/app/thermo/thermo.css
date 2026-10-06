@@ -1,0 +1,518 @@
+/* =========================================
+   THERMO INTERPOLATOR — Page Styles
+   Inherits design tokens from globals.css
+   ========================================= */
+
+.thermo-page {
+  padding-top: clamp(2rem, 5vw, 4rem);
+  padding-bottom: clamp(3rem, 6vw, 6rem);
+  max-width: 860px;
+}
+
+.thermo-header {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.thermo-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.thermo-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+}
+
+/* ── Mode Toggle ── */
+.thermo-mode-toggle {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thermo-mode-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  background: transparent;
+  transition: all var(--duration-fast) var(--ease-smooth);
+  border: none;
+  cursor: pointer;
+}
+
+.thermo-mode-btn.active {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+.thermo-mode-btn:not(.active):hover {
+  color: var(--text-primary);
+  background: rgba(201, 169, 110, 0.08);
+}
+
+/* ── Quality Sub-Toggle ── */
+.thermo-quality-toggle {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.thermo-quality-btn {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.thermo-quality-btn.active {
+  background: var(--bg-tertiary);
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+.thermo-quality-btn:not(.active):hover {
+  color: var(--text-primary);
+  background: rgba(201, 169, 110, 0.05);
+}
+
+/* ── Cards ── */
+.thermo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: 1.5rem;
+}
+
+.thermo-card h2 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  margin-bottom: 0.5rem;
+}
+
+.thermo-card-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* ── Shared Inputs ── */
+.thermo-input {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color var(--duration-fast) var(--ease-smooth),
+    box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+.thermo-input::placeholder {
+  color: var(--text-muted);
+}
+
+.thermo-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-dim);
+}
+
+/* ── Single interp visual table ── */
+.thermo-visual {
+  margin-bottom: 1.5rem;
+}
+
+.thermo-visual-header {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.thermo-table-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.thermo-table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--glass-border);
+}
+
+.thermo-table-row > span {
+  padding: 0.75rem 1rem;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.thermo-table-row.header > span {
+  background: var(--bg-tertiary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.thermo-table-row.target > span {
+  background: rgba(201, 169, 110, 0.06);
+}
+
+.thermo-table-row .thermo-input {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.5rem;
+  border-radius: 4px;
+}
+
+.thermo-table-row .thermo-input:focus {
+  border-color: var(--accent);
+  background: var(--bg-primary);
+}
+
+.thermo-unknown {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.4rem;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+.thermo-hint {
+  display: block;
+  font-size: 0.7rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  text-transform: none;
+  margin-top: 2px;
+}
+
+/* ── Double interpolation sections ── */
+.thermo-double-section {
+  margin-bottom: 1.5rem;
+}
+
+.thermo-double-section h3 {
+  font-size: 1rem;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.thermo-row-pair {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.thermo-row-pair label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── 2×2 Grid Visual ── */
+.thermo-grid-visual {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 1px;
+  background: var(--glass-border);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.thermo-grid-cell {
+  padding: 0.75rem 1rem;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+}
+
+.thermo-grid-cell.corner {
+  background: var(--bg-tertiary);
+}
+
+.thermo-grid-cell.col-head,
+.thermo-grid-cell.row-head {
+  background: var(--bg-tertiary);
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.thermo-grid-cell.data {
+  background: var(--bg-secondary);
+}
+
+.thermo-grid-cell.data .thermo-input {
+  text-align: center;
+  background: transparent;
+  border-color: transparent;
+}
+
+.thermo-grid-cell.data .thermo-input:focus {
+  border-color: var(--accent);
+  background: var(--bg-primary);
+}
+
+/* ── Calculate Button ── */
+.thermo-calc-btn {
+  display: block;
+  width: 100%;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bg-primary);
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-smooth),
+    transform var(--duration-fast) var(--ease-smooth);
+}
+
+.thermo-calc-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.thermo-calc-btn:active {
+  transform: translateY(0);
+}
+
+/* ── Result ── */
+.thermo-result {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--accent-dim);
+  background: rgba(201, 169, 110, 0.04);
+  animation: thermo-fade-in 0.35s var(--ease-smooth);
+}
+
+.thermo-result.error {
+  border-color: rgba(220, 80, 80, 0.4);
+  background: rgba(220, 80, 80, 0.06);
+}
+
+.thermo-result.error p {
+  color: #e07070;
+  font-size: 0.95rem;
+}
+
+.thermo-result-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.375rem;
+  letter-spacing: 0.02em;
+}
+
+.thermo-result-value {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.thermo-result-unit {
+  font-size: 0.7em;
+  color: var(--text-secondary);
+}
+
+.thermo-result-steps {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.thermo-result-steps h4 {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.thermo-result-steps p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.thermo-result-steps strong {
+  color: var(--accent);
+}
+
+/* ── Labels / Formula panels ── */
+.thermo-labels-panel,
+.thermo-formula-panel {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.thermo-labels-panel summary,
+.thermo-formula-panel summary {
+  padding: 0.875rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  background: var(--bg-card);
+  transition: color var(--duration-fast) var(--ease-smooth);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.thermo-labels-panel summary::before,
+.thermo-formula-panel summary::before {
+  content: '▸';
+  font-size: 0.75rem;
+  transition: transform var(--duration-fast) var(--ease-smooth);
+}
+
+.thermo-labels-panel[open] summary::before,
+.thermo-formula-panel[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.thermo-labels-panel summary::-webkit-details-marker,
+.thermo-formula-panel summary::-webkit-details-marker {
+  display: none;
+}
+
+.thermo-labels-panel summary:hover,
+.thermo-formula-panel summary:hover {
+  color: var(--text-primary);
+}
+
+.thermo-labels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: var(--bg-secondary);
+}
+
+.thermo-labels-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.thermo-formula-content {
+  padding: 1.25rem;
+  background: var(--bg-secondary);
+}
+
+.thermo-formula-content h4 {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.thermo-formula-content h4:first-child {
+  margin-top: 0;
+}
+
+.thermo-formula {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: var(--accent);
+  background: var(--bg-primary);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* ── Animation ── */
+@keyframes thermo-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .thermo-row-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .thermo-labels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .thermo-grid-visual {
+    font-size: 0.85rem;
+  }
+
+  .thermo-grid-cell {
+    padding: 0.5rem 0.625rem;
+  }
+
+  .thermo-table-row > span {
+    padding: 0.625rem 0.75rem;
+  }
+}
