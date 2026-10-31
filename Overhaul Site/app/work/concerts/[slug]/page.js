@@ -33,9 +33,33 @@ export default async function ConcertGallery({ params }) {
   let imagesData = [];
   try {
     const files = fs.readdirSync(dirPath);
-    const imageFiles = files
-      .filter(file => file.match(/\.(jpg|jpeg|png|webp|avif)$/i) && file !== 'cover.jpg' && file !== 'cover.webp')
-      .sort(new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'}).compare);
+    let imageFiles = files
+      .filter(file => file.match(/\.(jpg|jpeg|png|webp|avif)$/i) && file !== 'cover.jpg' && file !== 'cover.webp');
+
+    // Read custom image order if it exists
+    const orderFilePath = path.join(dirPath, 'image-order.json');
+    let imageOrder = [];
+    if (fs.existsSync(orderFilePath)) {
+      try {
+        imageOrder = JSON.parse(fs.readFileSync(orderFilePath, 'utf8'));
+      } catch (err) {
+        console.error('Error reading image-order.json in', dirPath, err);
+      }
+    }
+
+    if (imageOrder && imageOrder.length > 0) {
+      const orderBaseNames = imageOrder.map(item => path.basename(item));
+      imageFiles.sort((a, b) => {
+        const indexA = orderBaseNames.indexOf(path.basename(a));
+        const indexB = orderBaseNames.indexOf(path.basename(b));
+        if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+        if (indexA !== -1) return -1;
+        if (indexB !== -1) return 1;
+        return new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' }).compare(a, b);
+      });
+    } else {
+      imageFiles.sort(new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' }).compare);
+    }
       
     imagesData = await Promise.all(imageFiles.map(async (file) => {
       const filePath = path.join(dirPath, file);

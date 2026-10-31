@@ -7,6 +7,14 @@ export const metadata = {
 };
 
 export const concerts = [
+  { name: 'glaive @ Observatory North Park', slug: 'glaive', cover: '/images/concerts/glaive/cover.webp' },
+
+  { name: 'Tiffany Day @ Observatory North Park', slug: 'tiffany-day', cover: '/images/concerts/tiffany-day/cover.webp' },
+
+  { name: 'Isabel LaRosa @ Pacific Electric', slug: 'isabel-larosa', cover: '/images/concerts/isabel-larosa/cover.webp', imgStyle: { objectPosition: 'center' } },
+
+  { name: 'Ken Carson @ Gallagher Square', slug: 'ken-carson', cover: '/images/concerts/ken-carson/cover.webp', imgStyle: { objectPosition: 'center' } },
+
   { name: 'Bibi @ Sogang', slug: 'bibi-sogang', cover: '/images/concerts/bibi-sogang/cover.webp', imgStyle: { objectPosition: 'top' } },
   { name: 'Yena @ Sogang', slug: 'yena-sogang', cover: '/images/concerts/yena-sogang/cover.webp', imgStyle: { objectPosition: 'center 40%' } },
   { name: 'Maggie Lindemann & Ayleen Valentine', slug: 'maggie-lindemann', cover: '/images/concerts/maggie-lindemann/cover.webp' },
