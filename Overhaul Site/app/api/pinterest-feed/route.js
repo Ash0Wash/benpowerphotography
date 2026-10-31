@@ -95,17 +95,18 @@ export async function GET() {
         for (let i = 0; i < selectedImages.length; i++) {
           const file = selectedImages[i];
           const ext = path.extname(file);
-          const imageUrl = `${SITE_URL}/images/${categorySlug}/${slug}/${file}`;
-          const title = `${artistTitle} Live Photography #${i + 1} | Ben Power`;
-          const description = `Live concert and event photography of ${artistTitle} by Los Angeles music photographer Ben Power. Explore the full high-res photo gallery and press archive at ${galleryUrl}.`;
+          const rawImagePath = `/images/${categorySlug}/${slug}/${file}`;
+          const imageUrl = `${SITE_URL}/api/pinterest-image?path=${encodeURIComponent(rawImagePath)}`;
+          const title = `${artistTitle} Live Photography #${i + 1} | Ben Power (@benpowerphoto)`;
+          const description = `Live concert and event photography of ${artistTitle} by Los Angeles music photographer Ben Power (@benpowerphoto). Explore the full high-res photo gallery and press archive at ${galleryUrl}.`;
 
           feedItems.push({
             title,
             link: galleryUrl,
             imageUrl,
-            contentType: getContentType(ext),
+            contentType: 'image/jpeg',
             description,
-            guid: imageUrl,
+            guid: `${SITE_URL}${rawImagePath}`,
             pubDate: new Date().toUTCString()
           });
         }
