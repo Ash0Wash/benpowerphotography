@@ -21,6 +21,9 @@ export const metadata = {
   metadataBase: new URL('https://www.benpowerphotography.com'),
   verification: {
     google: 'iI9nnAsPxu0UWCB1hjqNqbM5ybPH5qX5zeWDnzXQJCk',
+    other: {
+      'p:domain_verify': 'dde1df7cef82e278c74bd4829a919d03',
+    },
   },
   title: {
     default: 'Ben Power Photography | Los Angeles Concert, Event & Portrait Photographer',
