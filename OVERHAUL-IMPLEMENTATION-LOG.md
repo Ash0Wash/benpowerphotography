@@ -93,3 +93,25 @@ Following creative review, the entire site was purged of generic "AI SaaS" trope
   2. **Services (`/services`):** Converted packages into an **Editorial Rate Sheet** with clean typographic hierarchy, direct candid language, and the 8:00 AM delivery guarantee.
   3. **Contact (`/contact`):** Replaced the corporate guarantee checklist with an authentic, direct sidebar note from Ben emphasizing next-morning delivery, commercial rights, and 100% hand-edited craftsmanship.
   4. **About (`/about`):** Written entirely in Ben's first-person voice ("I", "my") without corporate agency puffery.
+
+---
+
+## 6. High-Resolution Homepage Hero & Press Favorites Indexing
+
+### User Request
+- Eliminate hero background pixelation on high-DPI displays.
+- Pull original master exports from external SSD (`F:\hopefully temp\Edits`) with strict **READ-ONLY** safety.
+- Restrict homepage hero rotation exclusively to Ben's curated favorites in the Press directory (`app/press/image-order.json`).
+
+### Implementation Details
+- **SSD Master Match & Upscale (24 Images):**
+  - Read directly from `F:\hopefully temp\Edits\` (Ken Carson, Isabel LaRosa, glaive, Tiffany Day, Yena, Bibi).
+  - Generated 2880px wide WebP assets (`public/images/hero/press-*.webp`) at quality 90, preserving the full resolution of the 60MP Sony camera sensor edits (up to 4318px vertical).
+- **Press Favorites Upscale (31 Images):**
+  - Upscaled remaining press favorites (Cage the Elephant, Wet Leg, Malcolm Todd, X Ambassadors, Panchiko, Underscores, Snow Strippers, Skating Polly, Hinds, Maggie Lindemann, Bladee, Kawai, Brooke) to 2880px using Lanczos3 interpolation with unsharp mask filtering.
+- **Hero Image Randomizer:**
+  - `app/page.js` `heroImages` array updated to rotate across all 55 unique press favorites.
+  - Added custom `objectPosition` styling (e.g. `center 30%`, `center 35%`, `center 40%`) to keep performer faces and stage composition perfectly framed across all screen ratios.
+- **Next.js Quality & Device Sizing Configuration:**
+  - Expanded `deviceSizes` in `next.config.mjs` up to `[... 2048, 2560, 2880, 3840]` so Next.js never caps 1440p or 4K Retina screens.
+  - Added `qualities: [75, 85, 90]` and passed `quality={90}` in `HeroBackground.js` to eliminate macroblocking on dark concert gradients.
