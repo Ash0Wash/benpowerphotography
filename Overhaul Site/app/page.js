@@ -33,7 +33,6 @@ const heroImages = [
   { src: '/images/hero/thumb-maggie-lindemann.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-snowstrippers.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-party.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-ari.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-bladee.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-malcolm.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-cte.webp', objectPosition: 'center' },
