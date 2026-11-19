@@ -104,6 +104,30 @@
     "enabled": true
   },
   {
+    "id": "isabel-larosa-crowd-wide",
+    "title": "Isabel LaRosa (Crowd Singing Wide)",
+    "src": "/images/hero/hero-isabel-larosa-crowd-wide.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "isabel-larosa-kneel-crowd",
+    "title": "Isabel LaRosa (Stage Kneel Crowd)",
+    "src": "/images/hero/hero-isabel-larosa-kneel-crowd.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "isabel-larosa-hearts-crowd",
+    "title": "Isabel LaRosa (Crowd Pink Hearts)",
+    "src": "/images/hero/hero-isabel-larosa-hearts-crowd.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
     "id": "tiffany-day-stage",
     "title": "Tiffany Day (Live Stage)",
     "src": "/images/hero/press-tiffany-day-13.webp",
