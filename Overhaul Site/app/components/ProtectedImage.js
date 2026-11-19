@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-export default function ProtectedImage({ src, alt, fill, width, height, className, style, imgStyle, sizes, priority, unoptimized }) {
+export default function ProtectedImage({ src, alt, fill, width, height, className, style, imgStyle, sizes, priority, quality, unoptimized }) {
   const handleContextMenu = (e) => {
     e.preventDefault();
   };
@@ -37,6 +37,7 @@ export default function ProtectedImage({ src, alt, fill, width, height, classNam
           height={height}
           sizes={sizes}
           priority={priority}
+          quality={quality || 85}
           unoptimized={false}
           draggable={false}
           style={{

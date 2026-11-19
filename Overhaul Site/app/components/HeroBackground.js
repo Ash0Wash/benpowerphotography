@@ -26,6 +26,7 @@ export default function HeroBackground({ images }) {
         alt="Hero background"
         fill
         priority
+        quality={90}
         sizes="100vw"
         imgStyle={{ objectPosition: bg.objectPosition }}
       />
