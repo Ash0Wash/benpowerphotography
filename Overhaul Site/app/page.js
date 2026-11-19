@@ -23,38 +23,32 @@ const clientRoster = [
 ];
 
 const heroImages = [
-  // Concert Gallery Thumbnails (Matching /work/concerts framing with 2880px master upscales)
-  { src: '/images/hero/thumb-glaive.webp', objectPosition: 'center' },
+  // High-Resolution Master Concert Performances (SSD Camera Masters & 2000px+ Native Sources)
   { src: '/images/hero/thumb-tiffany-day.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-isabel-larosa.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-ken-carson.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-bibi-sogang.webp', objectPosition: 'top' },
   { src: '/images/hero/thumb-yena-sogang.webp', objectPosition: 'center 40%' },
   { src: '/images/hero/thumb-maggie-lindemann.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-snowstrippers.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-party.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-bladee.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-malcolm.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-cte.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-wetleg.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-skatingp.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-hinds.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-xambassadors.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-panchiko.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-aron.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-turnover.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-underscores.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-hopetala.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-slowtide-backyard.webp', objectPosition: 'center' },
-  { src: '/images/hero/thumb-tpb.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-slowtide-bbb.webp', objectPosition: 'center' },
+  { src: '/images/hero/hero-glaive-1.webp', objectPosition: 'center' },
+  { src: '/images/hero/hero-ken-carson-1.webp', objectPosition: 'center 35%' },
+  { src: '/images/hero/hero-ken-carson-2.webp', objectPosition: 'center 35%' },
+  { src: '/images/hero/hero-ken-carson-3.webp', objectPosition: 'center 40%' },
+  { src: '/images/hero/press-isabel-larosa-12.webp', objectPosition: 'center' },
+  { src: '/images/hero/press-tiffany-day-13.webp', objectPosition: 'center' },
+  { src: '/images/hero/hero-thee-sacred-souls.webp', objectPosition: 'center 40%' },
+  { src: '/images/hero/hero-rks.webp', objectPosition: 'center' },
+  { src: '/images/hero/hero-yena.webp', objectPosition: 'center 40%' },
+  { src: '/images/hero/press-yena-13.webp', objectPosition: 'center 40%' },
 
-  // Portrait Gallery Thumbnails (Excluding Prom and Animals)
-  { src: '/images/hero/thumb-brooke.webp', objectPosition: 'center' },
+  // Portrait Gallery High-Res (Excluding Prom and Animals)
   { src: '/images/hero/thumb-kendi.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-slowtide.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-brooke.webp', objectPosition: 'center' },
 
-  // All Portraits of Kawai (Standard Framing, No Custom Crop Offsets)
+  // All Portraits of Kawai (High-Res Studio Sessions with Standard Center Framing)
   { src: '/images/hero/thumb-kawai-cover.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-kawai-01.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-kawai-13.webp', objectPosition: 'center' },
