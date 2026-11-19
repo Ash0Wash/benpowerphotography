@@ -1,0 +1,338 @@
+[
+  {
+    "id": "tiffany-day-thumb",
+    "title": "Tiffany Day (Cover)",
+    "src": "/images/hero/thumb-tiffany-day.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "isabel-larosa-thumb",
+    "title": "Isabel LaRosa (Cover)",
+    "src": "/images/hero/thumb-isabel-larosa.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "ken-carson-thumb",
+    "title": "Ken Carson (Cover)",
+    "src": "/images/hero/thumb-ken-carson.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "bibi-sogang-thumb",
+    "title": "Bibi @ Sogang",
+    "src": "/images/hero/thumb-bibi-sogang.webp",
+    "objectPosition": "top",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "yena-sogang-thumb",
+    "title": "Yena @ Sogang",
+    "src": "/images/hero/thumb-yena-sogang.webp",
+    "objectPosition": "center 40%",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "maggie-lindemann-thumb",
+    "title": "Maggie Lindemann",
+    "src": "/images/hero/thumb-maggie-lindemann.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "hopetala-thumb",
+    "title": "Hope Tala",
+    "src": "/images/hero/thumb-hopetala.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "slowtide-bbb-thumb",
+    "title": "Slowtide Big Blue Bash",
+    "src": "/images/hero/thumb-slowtide-bbb.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "glaive-master",
+    "title": "glaive (Stage Master)",
+    "src": "/images/hero/hero-glaive-1.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "ken-carson-master-1",
+    "title": "Ken Carson (Master 1)",
+    "src": "/images/hero/hero-ken-carson-1.webp",
+    "objectPosition": "center 35%",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "ken-carson-master-2",
+    "title": "Ken Carson (Master 2)",
+    "src": "/images/hero/hero-ken-carson-2.webp",
+    "objectPosition": "center 35%",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "ken-carson-master-3",
+    "title": "Ken Carson (Master 3)",
+    "src": "/images/hero/hero-ken-carson-3.webp",
+    "objectPosition": "center 40%",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "isabel-larosa-stage",
+    "title": "Isabel LaRosa (Live Stage)",
+    "src": "/images/hero/press-isabel-larosa-12.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "tiffany-day-stage",
+    "title": "Tiffany Day (Live Stage)",
+    "src": "/images/hero/press-tiffany-day-13.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "thee-sacred-souls",
+    "title": "Thee Sacred Souls (Stage Master)",
+    "src": "/images/hero/hero-thee-sacred-souls.webp",
+    "objectPosition": "center 40%",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "rks-master",
+    "title": "Rainbow Kitten Surprise (Stage Master)",
+    "src": "/images/hero/hero-rks.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "yena-stage-1",
+    "title": "Yena (Stage Master 1)",
+    "src": "/images/hero/hero-yena.webp",
+    "objectPosition": "center 40%",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "yena-stage-2",
+    "title": "Yena (Stage Master 2)",
+    "src": "/images/hero/press-yena-13.webp",
+    "objectPosition": "center 40%",
+    "category": "Concert",
+    "enabled": true
+  },
+  {
+    "id": "kendi-portrait",
+    "title": "Kendi (Portraits)",
+    "src": "/images/hero/thumb-kendi.webp",
+    "objectPosition": "center",
+    "category": "Portrait",
+    "enabled": true
+  },
+  {
+    "id": "slowtide-portrait",
+    "title": "Slowtide (Portraits)",
+    "src": "/images/hero/thumb-slowtide.webp",
+    "objectPosition": "center",
+    "category": "Portrait",
+    "enabled": true
+  },
+  {
+    "id": "brooke-portrait",
+    "title": "Brooke (Portraits)",
+    "src": "/images/hero/thumb-brooke.webp",
+    "objectPosition": "center",
+    "category": "Portrait",
+    "enabled": true
+  },
+  {
+    "id": "kawai-cover",
+    "title": "Kawai (Cover)",
+    "src": "/images/hero/thumb-kawai-cover.webp",
+    "objectPosition": "center",
+    "category": "Portrait",
+    "enabled": true
+  },
+  {
+    "id": "kawai-01",
+    "title": "Kawai #01",
+    "src": "/images/hero/thumb-kawai-01.webp",
+    "objectPosition": "center",
+    "category": "Portrait",
+    "enabled": true
+  },
+  {
+    "id": "kawai-13",
+    "title": "Kawai #13",
+    "src": "/images/hero/thumb-kawai-13.webp",
+    "objectPosition": "center",
+    "category": "Portrait",
+    "enabled": true
+  },
+  {
+    "id": "kawai-19",
+    "title": "Kawai #19",
+    "src": "/images/hero/thumb-kawai-19.webp",
+    "objectPosition": "center",
+    "category": "Portrait",
+    "enabled": true
+  },
+  {
+    "id": "kawai-21",
+    "title": "Kawai #21",
+    "src": "/images/hero/thumb-kawai-21.webp",
+    "objectPosition": "center",
+    "category": "Portrait",
+    "enabled": true
+  },
+  {
+    "id": "bladee-thumb",
+    "title": "Bladee",
+    "src": "/images/hero/thumb-bladee.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "cte-thumb",
+    "title": "Cage the Elephant",
+    "src": "/images/hero/thumb-cte.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "wetleg-thumb",
+    "title": "Wet Leg",
+    "src": "/images/hero/thumb-wetleg.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "malcolm-thumb",
+    "title": "Malcolm Todd",
+    "src": "/images/hero/thumb-malcolm.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "skatingp-thumb",
+    "title": "Skating Polly",
+    "src": "/images/hero/thumb-skatingp.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "hinds-thumb",
+    "title": "Hinds",
+    "src": "/images/hero/thumb-hinds.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "xambassadors-thumb",
+    "title": "X Ambassadors",
+    "src": "/images/hero/thumb-xambassadors.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "panchiko-thumb",
+    "title": "Panchiko",
+    "src": "/images/hero/thumb-panchiko.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "snowstrippers-thumb",
+    "title": "Snow Strippers",
+    "src": "/images/hero/thumb-snowstrippers.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "party-thumb",
+    "title": "PartyOf2",
+    "src": "/images/hero/thumb-party.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "aron-thumb",
+    "title": "aron!",
+    "src": "/images/hero/thumb-aron.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "turnover-thumb",
+    "title": "Turnover",
+    "src": "/images/hero/thumb-turnover.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "underscores-thumb",
+    "title": "Underscores",
+    "src": "/images/hero/thumb-underscores.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "slowtide-backyard-thumb",
+    "title": "Slowtide Backyard",
+    "src": "/images/hero/thumb-slowtide-backyard.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "tpb-thumb",
+    "title": "TPB Ole Music Fest",
+    "src": "/images/hero/thumb-tpb.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  },
+  {
+    "id": "ari-thumb",
+    "title": "Ari Abdul",
+    "src": "/images/hero/thumb-ari.webp",
+    "objectPosition": "center",
+    "category": "Concert",
+    "enabled": false
+  }
+]

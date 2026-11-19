@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
 import ProtectedImage from './components/ProtectedImage';
 import HeroBackground from './components/HeroBackground';
 
@@ -22,7 +24,7 @@ const clientRoster = [
   'Malcolm Todd',
 ];
 
-const heroImages = [
+const defaultHeroImages = [
   // High-Resolution Master Concert Performances (SSD Camera Masters & 2000px+ Native Sources)
   { src: '/images/hero/thumb-tiffany-day.webp', objectPosition: 'center' },
   { src: '/images/hero/thumb-isabel-larosa.webp', objectPosition: 'center' },
@@ -56,9 +58,24 @@ const heroImages = [
   { src: '/images/hero/thumb-kawai-21.webp', objectPosition: 'center' },
 ];
 
+function getActiveHeroImages() {
+  try {
+    const configPath = path.join(process.cwd(), 'data', 'hero-config.json');
+    if (fs.existsSync(configPath)) {
+      const data = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+      const enabled = data.filter((item) => item.enabled);
+      if (enabled.length > 0) return enabled;
+    }
+  } catch (e) {
+    console.error('Error reading hero-config.json:', e);
+  }
+  return defaultHeroImages;
+}
+
 export const dynamic = 'force-dynamic';
 
 export default function Home() {
+  const heroImages = getActiveHeroImages();
   // eslint-disable-next-line react-hooks/purity
   const randomIndex = Math.floor(Math.random() * heroImages.length);
   const randomHero = heroImages[randomIndex];

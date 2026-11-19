@@ -139,12 +139,54 @@ Following creative review, the entire site was purged of generic "AI SaaS" trope
 - Utilize the pre-formatted thumbnail covers from every concert and portrait gallery directory on the site.
 - Preserve the exact landscape framing already tuned on `/work/concerts` (e.g. `bibi-sogang`: `top`, `yena-sogang`: `center 40%`, others: `center`).
 - Remove custom top-anchor offsets on Kawai portraits; use clean standard framing (`center`).
-- Strictly exclude `prom` and `animals` directories, as well as Ari Abdul.
-- Upscale all directory thumbnails to 2880px master WebP files.
+- Strictly exclude `prom` and `animals` directories, Ari Abdul, Underscores, and any low-resolution thumbnails.
+- Restrict hero rotation exclusively to verified ultra high-resolution master assets (2000px+ native masters and 60MP Sony sensor RAW exports).
 
 ### Implementation
-- Generated 32 master 2880px WebP assets (`public/images/hero/thumb-*.webp`):
-  - 24 concert thumbnails: `glaive`, `tiffany-day`, `isabel-larosa`, `ken-carson`, `bibi-sogang`, `yena-sogang`, `maggie-lindemann`, `snowstrippers`, `party`, `bladee`, `malcolm`, `cte`, `wetleg`, `skatingp`, `hinds`, `xambassadors`, `panchiko`, `aron`, `turnover`, `underscores`, `hopetala`, `slowtide-backyard`, `tpb`, `slowtide-bbb` (Ari Abdul excluded).
-  - 3 non-prom/animal portrait gallery covers: `brooke`, `kendi`, `slowtide`.
-  - 5 full Kawai portraits: `kawai-cover`, `kawai-01`, `kawai-13`, `kawai-19`, `kawai-21` (all with clean standard `center` framing).
+- Filtered hero images down to 26 verified ultra-high-definition frames:
+  - 18 master concert performance frames: `ken-carson` (4 camera masters), `isabel-larosa` (2 camera masters), `tiffany-day` (2 camera masters), `bibi-sogang` (camera master), `yena-sogang` (3 camera masters), `glaive` (camera master), `thee-sacred-souls` (camera master), `rks` (camera master), `maggie-lindemann` (native 2400x1601), `hopetala` (native 2048x1324), `slowtide-bbb` (native 2048x1266).
+  - 3 high-res portrait sessions: `kendi` (2048x1536), `slowtide` (2048x1366), `brooke` (1440x902, 577KB).
+  - 5 full Kawai studio portraits: `kawai-cover`, `kawai-01`, `kawai-13`, `kawai-19`, `kawai-21` (native 1920x2400 upscaled to 2880px, with standard `center` framing).
+- Removed all low-resolution thumbnails (e.g. `underscores` 589x720 22KB, `cte` 960x689 47KB, `turnover` 810x1080 47KB, `tpb` 63KB, `bladee` 55KB, `party` 64KB).
 - Verified with `export const dynamic = 'force-dynamic'` for instant first-frame SSR delivery and 0-error ESLint validation.
+
+---
+
+## 9. Hero Refresher Admin Dashboard & Non-Localhost Security Redirect
+
+### User Requirements
+1. Provide an administrative dashboard (`/admin`) for manual control over hero refresher photos:
+   - Toggle photos active or inactive in the refresher rotation.
+   - Adjust vertical cropping / object position (`top`, `center`, `bottom`, or custom percentages `0%` to `100%`) with live real-time preview in 16:9 hero aspect ratio.
+   - Add new photo URLs/paths into the rotation.
+   - Remove photos from the pool.
+   - Save changes directly to a persistent JSON configuration file (`data/hero-config.json`).
+2. Autoredirect anyone back to the homepage (`/`) if they attempt to open `/admin` while not on `localhost` (preventing external visitors on `benpowerphotography.com` from accessing or modifying hero configurations).
+
+### Architecture & Implementation
+1. **Persistent Configuration File (`data/hero-config.json`):**
+   - Holds 42 configured hero candidates with `id`, `title`, `src`, `objectPosition`, `category`, and `enabled` boolean flags.
+   - 26 active high-definition concert and portrait frames enabled by default; low-res thumbnails, Ari Abdul, and prom/animals safely archived as disabled.
+2. **Server-Side Host Gate & HTTP Redirect (`app/admin/layout.js`):**
+   - Inspects incoming request headers via `headers()` in Next.js App Router Server Component.
+   - Detects whether the host starts with `localhost`, `127.0.0.1`, or `[::1]`.
+   - Any remote host (e.g. `benpowerphotography.com`) triggers an immediate `redirect('/')` (HTTP 307 Temporary Redirect).
+   - Configured `robots: { index: false, follow: false }` to prevent search engine indexing.
+3. **Client-Side Host Safeguard (`app/admin/page.js`):**
+   - Client component verifies `window.location.hostname` in `useEffect` and calls `window.location.replace('/')` if non-localhost, preventing SPA-routed navigation access.
+4. **Localhost-Only CRUD API (`app/api/admin/hero/route.js`):**
+   - Server-side `GET` and `POST` handlers check incoming request headers via `isLocalhost()`.
+   - Returns `403 Forbidden` for non-localhost callers.
+   - Atomically reads and writes to `data/hero-config.json`.
+5. **Interactive Dark-Mode Admin UI (`app/admin/page.js`):**
+   - Visual 16:9 hero aspect-ratio simulation boxes showing instant CSS `objectPosition` feedback.
+   - Vertical cropping range slider (`0%` to `100%`) + quick presets (`Top`, `30%`, `Center`, `40%`, `Bottom`).
+   - Active/Hidden toggle switch badge.
+   - Category filtering (`All`, `Active`, `Disabled`, `Concert`, `Portrait`) and search bar.
+   - Add Custom Photo modal dialog and Delete action.
+   - Floating action bar showing unsaved change count and "Save Changes" button.
+6. **Dynamic Server-Side Integration (`app/page.js`):**
+   - Server-side `getActiveHeroImages()` reads `data/hero-config.json` on every request.
+   - Seamlessly falls back to `defaultHeroImages` if the file is unavailable.
+   - Renders the chosen frame directly in SSR HTML with `priority` preloading, guaranteeing zero load flash.
+
