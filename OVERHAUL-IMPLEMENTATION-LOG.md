@@ -139,12 +139,12 @@ Following creative review, the entire site was purged of generic "AI SaaS" trope
 - Utilize the pre-formatted thumbnail covers from every concert and portrait gallery directory on the site.
 - Preserve the exact landscape framing already tuned on `/work/concerts` (e.g. `bibi-sogang`: `top`, `yena-sogang`: `center 40%`, others: `center`).
 - Remove custom top-anchor offsets on Kawai portraits; use clean standard framing (`center`).
-- Strictly exclude `prom` and `animals` directories.
+- Strictly exclude `prom` and `animals` directories, as well as Ari Abdul.
 - Upscale all directory thumbnails to 2880px master WebP files.
 
 ### Implementation
-- Generated 33 master 2880px WebP assets (`public/images/hero/thumb-*.webp`):
-  - 25 concert thumbnails: `glaive`, `tiffany-day`, `isabel-larosa`, `ken-carson`, `bibi-sogang`, `yena-sogang`, `maggie-lindemann`, `snowstrippers`, `party`, `ari`, `bladee`, `malcolm`, `cte`, `wetleg`, `skatingp`, `hinds`, `xambassadors`, `panchiko`, `aron`, `turnover`, `underscores`, `hopetala`, `slowtide-backyard`, `tpb`, `slowtide-bbb`.
+- Generated 32 master 2880px WebP assets (`public/images/hero/thumb-*.webp`):
+  - 24 concert thumbnails: `glaive`, `tiffany-day`, `isabel-larosa`, `ken-carson`, `bibi-sogang`, `yena-sogang`, `maggie-lindemann`, `snowstrippers`, `party`, `bladee`, `malcolm`, `cte`, `wetleg`, `skatingp`, `hinds`, `xambassadors`, `panchiko`, `aron`, `turnover`, `underscores`, `hopetala`, `slowtide-backyard`, `tpb`, `slowtide-bbb` (Ari Abdul excluded).
   - 3 non-prom/animal portrait gallery covers: `brooke`, `kendi`, `slowtide`.
   - 5 full Kawai portraits: `kawai-cover`, `kawai-01`, `kawai-13`, `kawai-19`, `kawai-21` (all with clean standard `center` framing).
 - Verified with `export const dynamic = 'force-dynamic'` for instant first-frame SSR delivery and 0-error ESLint validation.
