@@ -23,33 +23,44 @@ const clientRoster = [
 ];
 
 const heroImages = [
-  // Live Stage & Concert Performance (Landscape Framing - No Crop Issues)
-  { src: '/images/hero/hero-ken-carson-1.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/hero-ken-carson-2.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/hero-ken-carson-3.webp', objectPosition: 'center 40%' },
-  { src: '/images/hero/press-isabel-larosa-12.webp', objectPosition: 'center' },
-  { src: '/images/hero/hero-glaive-1.webp', objectPosition: 'center' },
-  { src: '/images/hero/hero-tiffany-1.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-tiffany-day-13.webp', objectPosition: 'center' },
-  { src: '/images/hero/hero-thee-sacred-souls.webp', objectPosition: 'center 40%' },
-  { src: '/images/hero/hero-rks.webp', objectPosition: 'center' },
-  { src: '/images/hero/hero-yena.webp', objectPosition: 'center 40%' },
-  { src: '/images/hero/press-yena-13.webp', objectPosition: 'center 40%' },
-  { src: '/images/hero/press-bladee-13.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-cte-landscape.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-wetleg-landscape.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-xambassadors-03.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-maggie-lindemann-02.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-maggie-lindemann-21.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-snowstrippers-27.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-skatingp-10.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-concerts-01.webp', objectPosition: 'center' },
+  // Concert Gallery Thumbnails (Matching /work/concerts framing with 2880px master upscales)
+  { src: '/images/hero/thumb-glaive.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-tiffany-day.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-isabel-larosa.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-ken-carson.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-bibi-sogang.webp', objectPosition: 'top' },
+  { src: '/images/hero/thumb-yena-sogang.webp', objectPosition: 'center 40%' },
+  { src: '/images/hero/thumb-maggie-lindemann.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-snowstrippers.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-party.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-ari.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-bladee.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-malcolm.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-cte.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-wetleg.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-skatingp.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-hinds.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-xambassadors.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-panchiko.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-aron.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-turnover.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-underscores.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-hopetala.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-slowtide-backyard.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-tpb.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-slowtide-bbb.webp', objectPosition: 'center' },
 
-  // Kawai Artist Portraits (Preserved per User Request with Tuned Vertical Anchor)
-  { src: '/images/hero/press-kawai-01.webp', objectPosition: 'center 20%' },
-  { src: '/images/hero/press-kawai-13.webp', objectPosition: 'center 20%' },
-  { src: '/images/hero/press-kawai-19.webp', objectPosition: 'center 25%' },
-  { src: '/images/hero/press-kawai-21.webp', objectPosition: 'center 20%' },
+  // Portrait Gallery Thumbnails (Excluding Prom and Animals)
+  { src: '/images/hero/thumb-brooke.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-kendi.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-slowtide.webp', objectPosition: 'center' },
+
+  // All Portraits of Kawai (Standard Framing, No Custom Crop Offsets)
+  { src: '/images/hero/thumb-kawai-cover.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-kawai-01.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-kawai-13.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-kawai-19.webp', objectPosition: 'center' },
+  { src: '/images/hero/thumb-kawai-21.webp', objectPosition: 'center' },
 ];
 
 export const dynamic = 'force-dynamic';
