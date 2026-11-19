@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import ProtectedImage from './components/ProtectedImage';
 import HeroBackground from './components/HeroBackground';
-import { concerts } from './work/concerts/page';
-import { portraits } from './work/portraits/page';
 
 const clientRoster = [
   'Cage the Elephant',
@@ -10,6 +8,8 @@ const clientRoster = [
   'Ken Carson',
   'Isabel LaRosa',
   'Bladee',
+  'Thee Sacred Souls',
+  'Rainbow Kitten Surprise',
   'X Ambassadors',
   'Maggie Lindemann',
   'Hinds',
@@ -22,19 +22,25 @@ const clientRoster = [
   'Malcolm Todd',
 ];
 
-export default function Home() {
-  const recentConcerts = concerts.slice(0, 7);
-  const images = [...recentConcerts, ...portraits].map(item => ({
-    src: item.cover,
-    objectPosition: item.imgStyle?.objectPosition || 'center'
-  }));
+const heroImages = [
+  { src: '/images/hero/hero-ken-carson-1.webp', objectPosition: 'center 40%' },
+  { src: '/images/hero/hero-ken-carson-2.webp', objectPosition: 'center 35%' },
+  { src: '/images/hero/hero-ken-carson-3.webp', objectPosition: 'center' },
+  { src: '/images/hero/hero-glaive-1.webp', objectPosition: 'center' },
+  { src: '/images/hero/hero-glaive-2.webp', objectPosition: 'center 45%' },
+  { src: '/images/hero/hero-tiffany-1.webp', objectPosition: 'center' },
+  { src: '/images/hero/hero-thee-sacred-souls.webp', objectPosition: 'center' },
+  { src: '/images/hero/hero-rks.webp', objectPosition: 'center' },
+  { src: '/images/hero/hero-yena.webp', objectPosition: 'center 40%' },
+];
 
+export default function Home() {
   return (
     <div>
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg">
-          <HeroBackground images={images} />
+          <HeroBackground images={heroImages} />
         </div>
         <div className="hero-content">
           <p className="hero-subtitle">Los Angeles · San Diego · Worldwide</p>

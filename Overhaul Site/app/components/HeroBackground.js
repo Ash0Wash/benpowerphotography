@@ -4,12 +4,15 @@ import { useState, useEffect } from 'react';
 import ProtectedImage from './ProtectedImage';
 
 export default function HeroBackground({ images }) {
-  const [bg, setBg] = useState(null);
+  const [bg, setBg] = useState(() => (images && images.length > 0 ? images[0] : null));
 
   useEffect(() => {
-    if (!images || images.length === 0) return;
-    const randomIndex = Math.floor(Math.random() * images.length);
-    setBg(images[randomIndex]);
+    if (!images || images.length <= 1) return;
+    const timer = setTimeout(() => {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      setBg(images[randomIndex]);
+    }, 0);
+    return () => clearTimeout(timer);
   }, [images]);
 
   if (!bg) {
@@ -23,6 +26,7 @@ export default function HeroBackground({ images }) {
         alt="Hero background"
         fill
         priority
+        sizes="100vw"
         imgStyle={{ objectPosition: bg.objectPosition }}
       />
     </div>
