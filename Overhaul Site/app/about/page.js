@@ -1,8 +1,8 @@
 import ProtectedImage from '../components/ProtectedImage';
 
 export const metadata = {
-  title: 'About Ben Power',
-  description: 'Ben Power is a Los Angeles and San Diego photographer with over 5 years of experience in concert, portrait, and street photography. His work has been featured in art shows across California.',
+  title: 'About Ben Power | Los Angeles & San Diego Photographer',
+  description: 'Ben Power is a Los Angeles and San Diego photographer with over 5 years of experience in concert, portrait, and street photography. Co-owner of Not On Stage.',
   alternates: {
     canonical: 'https://www.benpowerphotography.com/about',
   },
@@ -23,7 +23,7 @@ const faqSchema = {
       name: 'Who is Ben Power Photography?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Ben Power is a professional photographer based in Los Angeles and San Diego, California. He specializes in live music concert photography, portrait photography, and street photography. His work has been featured in art shows across Los Angeles, San Diego, and Ventura.',
+        text: 'Ben Power is a professional photographer based in Los Angeles and San Diego, California. He specializes in live music concert photography, portrait photography, and street photography, and is the Co-Owner and Lead Photographer at Not On Stage (notonstage.com).',
       },
     },
     {
@@ -39,7 +39,7 @@ const faqSchema = {
       name: 'What does Ben Power Photography specialize in?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Ben Power Photography specializes in live music and concert photography, portrait photography, and street photography. Ben has covered 20+ shows and has extensive experience capturing the energy of live performance.',
+        text: 'Ben Power Photography specializes in live music and concert photography, portrait photography, and street photography with extensive experience capturing the energy of live performance.',
       },
     },
     {
@@ -75,14 +75,10 @@ export default function About() {
           </div>
           <div className="about-text">
             <p className="about-bio">
-              Ben Power is a Los Angeles and San Diego based photographer with over five years of
-              experience capturing the world through his lens. Rooted in California and shooting
-              globally, Ben&apos;s work spans live music, portraiture, and street photography.
+              I&apos;m a Los Angeles and San Diego based photographer with over five years of experience capturing the world through my lens. Rooted in California and shooting globally, my work spans live music, portraiture, and street photography.
             </p>
             <p className="about-detail">
-              His photography has been featured in multiple art shows across Los Angeles, San Diego,
-              and Ventura, bringing his distinctive visual style to audiences throughout Southern
-              California and beyond.
+              My work has been featured in art shows across Los Angeles, San Diego, and Ventura, bringing my visual style to audiences throughout California and beyond.
             </p>
           </div>
         </div>
@@ -97,18 +93,23 @@ export default function About() {
           </div>
           <div className="about-text">
             <p className="about-bio" style={{ marginBottom: '1.5rem' }}>
-              Ben specializes in live music and concert photography, having covered 20+ shows at
-              venues across Los Angeles and San Diego. His ability to freeze the true energy, motion, 
-              and emotion of a live performance defines his approach to every shoot.
+              I specialize in live music and concert photography, having covered 25+ shows at venues across Los Angeles and San Diego. I&apos;m also the Lead Photographer and Co-Owner of{' '}
+              <a
+                href="https://notonstage.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'var(--accent)', textDecoration: 'underline', textUnderlineOffset: '4px' }}
+              >
+                Not On Stage
+              </a>
+              , an independent publication with over 970 published concert galleries. My approach is centered on freezing the true energy, motion, and emotion of a live performance.
             </p>
             <p className="about-detail">
-              Whether shooting portraits, concerts, or the streets of California, Ben Power
-              Photography brings technical precision and an eye for real moments to every
-              project. Based in Los Angeles, available globally.
+              Whether I&apos;m shooting portraits, concerts, or street photography, I bring technical precision and an eye for real moments to every project. I hand-edit every single frame from scratch. Based in Los Angeles &amp; San Diego, available globally.
             </p>
-            <p className="about-detail" style={{ marginTop: '1rem' }}>
+            <p className="about-detail" style={{ marginTop: '1.5rem' }}>
               <strong>Contact:</strong>{' '}
-              <a href="mailto:contact@benpowerphotography.com">
+              <a href="mailto:contact@benpowerphotography.com" className="contact-link">
                 contact@benpowerphotography.com
               </a>
               {' '}·{' '}
@@ -116,6 +117,7 @@ export default function About() {
                 href="https://instagram.com/benpowerphoto"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="contact-link"
               >
                 @benpowerphoto
               </a>
@@ -126,4 +128,3 @@ export default function About() {
     </>
   );
 }
-

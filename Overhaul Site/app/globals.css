@@ -1111,3 +1111,369 @@ main {
   border-radius: 4px;
   overflow: hidden;
 }
+
+
+/* ===================================================
+   EDITORIAL CREDITS & COLLABORATORS BAR (HOMEPAGE)
+   =================================================== */
+.editorial-credits-bar {
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  background: rgba(14, 14, 14, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 1.75rem 0;
+  margin-bottom: 2.5rem;
+}
+
+.editorial-credits-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.credits-publication {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.credits-role {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.credits-pub-link {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+
+.credits-pub-link:hover {
+  color: var(--accent);
+}
+
+.credits-detail {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.credits-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--glass-border);
+}
+
+@media (max-width: 900px) {
+  .credits-divider {
+    display: none;
+  }
+}
+
+.credits-roster {
+  flex: 1;
+  min-width: 280px;
+}
+
+.credits-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.credits-artists {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+
+.credits-archive-btn {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.credits-archive-btn:hover {
+  border-color: var(--accent);
+  background: rgba(201, 169, 110, 0.08);
+}
+
+/* ===================================================
+   EDITORIAL TOUR HOOK (HOMEPAGE)
+   =================================================== */
+.editorial-tour-hook {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 4vw, 3rem);
+  margin-top: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.editorial-tour-text {
+  max-width: 680px;
+}
+
+.editorial-tour-text h3 {
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  margin: 0.5rem 0 0.75rem;
+  color: var(--text-primary);
+}
+
+.editorial-tour-text p {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.editorial-tour-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+/* ===================================================
+   EDITORIAL RATE CARDS (/services)
+   =================================================== */
+.rate-cards-list {
+  border-top: 1px solid var(--glass-border);
+  margin: 2.5rem 0 3rem;
+}
+
+.rate-card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--glass-border);
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .rate-card-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 0;
+  }
+}
+
+.rate-card-title {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.rate-card-price {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.75rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.rate-card-unit {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.rate-card-lead {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.rate-deliverables-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 0.5rem;
+}
+
+.rate-deliverables-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.rate-dot {
+  color: var(--accent);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.editorial-note-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  margin-top: 2rem;
+}
+
+.editorial-note-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.editorial-note-box p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ===================================================
+   AUTHENTIC BOOKING FORM (/contact)
+   =================================================== */
+.booking-form-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  padding: 1.5rem 0 3rem;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .booking-form-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.booking-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.editorial-sidebar-note {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.booking-select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23c9a96e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px;
+  transition: border-color var(--duration-fast) var(--ease-smooth);
+}
+
+.booking-select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.booking-select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 0.5rem;
+}
+
+.budget-tiers-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 500px) {
+  .budget-tiers-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.budget-tier-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.budget-tier-label input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.budget-tier-label:hover {
+  border-color: var(--accent-dim);
+}
+
+.budget-tier-label.selected,
+.budget-tier-label:has(input:checked) {
+  border-color: var(--accent);
+  background: rgba(201, 169, 110, 0.1);
+}
+
+.budget-tier-amount {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.budget-tier-label.selected .budget-tier-amount,
+.budget-tier-label:has(input:checked) .budget-tier-amount {
+  color: var(--accent);
+}
+
+.budget-tier-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+  letter-spacing: 0.04em;
+}

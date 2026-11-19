@@ -26,21 +26,24 @@ export const metadata = {
     },
   },
   title: {
-    default: 'Ben Power Photography | Los Angeles Concert, Event & Portrait Photographer',
+    default: 'Ben Power Photography | Los Angeles & San Diego Concert & Music Portrait Photographer',
     template: '%s | Ben Power Photography',
   },
-  description: 'Based in LA and San Diego, Ben Power Photography specializes in capturing the true energy of live music, professional portraiture, and event photography.',
+  description: 'High-energy concert photography, band press portraits, and tour visual packages in Los Angeles and San Diego. Lead Photographer at Not On Stage.',
   keywords: [
     'Ben Power Photography',
     'Los Angeles concert photographer',
+    'San Diego live music photographer',
+    'tour photographer Southern California',
+    'band press photographer LA',
+    'music festival photographer California',
+    'concert photography packages LA',
+    'music industry photographer',
+    'tour stop photographer',
+    'Not On Stage photographer',
     'LA music photographer',
     'San Diego event photographer',
     'stylized portrait photographer Los Angeles',
-    'live music photography LA',
-    'California portrait sessions',
-    'music industry photographer',
-    'event photographer LA',
-    'benpowerphotography',
   ],
   authors: [{ name: 'Ben Power', url: 'https://www.benpowerphotography.com' }],
   creator: 'Ben Power',
@@ -58,38 +61,45 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://www.benpowerphotography.com',
     siteName: 'Ben Power Photography',
-    title: 'Ben Power Photography | Los Angeles Concert, Event & Portrait Photographer',
-    description: 'Based in LA and San Diego, Ben Power Photography specializes in capturing the true energy of live music, professional portraiture, and event photography.',
+    title: 'Ben Power Photography | Los Angeles & San Diego Concert & Music Portrait Photographer',
+    description: 'High-energy concert photography, band press portraits, and tour visual packages in Los Angeles and San Diego. Lead Photographer at Not On Stage.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ben Power Photography in Los Angeles for Concerts, Events & Portraits',
+        alt: 'Ben Power Photography - Los Angeles & San Diego Concert and Tour Photographer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ben Power Photography | Los Angeles Concert, Event & Portrait Photographer',
-    description: 'Live music, stylized portraits & event photography. Based in Los Angeles & San Diego, CA.',
+    title: 'Ben Power Photography | Los Angeles & San Diego Concert & Music Portrait Photographer',
+    description: 'High-energy concert photography, band press portraits, and tour visual packages in Los Angeles and San Diego. Lead Photographer at Not On Stage.',
     images: ['/og-image.jpg'],
     creator: '@benpowerphoto',
   },
 };
 
-// JSON-LD Person schema: tells Google, AI search, and Knowledge Graph exactly who Ben Power is
+// JSON-LD Person schema: establishes Knowledge Graph identity for Ben Power
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  '@id': 'https://www.benpowerphotography.com/#person',
   name: 'Ben Power',
-  jobTitle: 'Photographer',
+  jobTitle: 'Lead Concert & Music Photographer, Co-Owner',
   url: 'https://www.benpowerphotography.com',
   email: 'contact@benpowerphotography.com',
   sameAs: [
     'https://www.instagram.com/benpowerphoto',
-    // Add your LinkedIn URL here once created: 'https://www.linkedin.com/in/benpowerphoto'
+    'https://notonstage.com',
+    'https://notonstage.com/coverage',
   ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Not On Stage',
+    url: 'https://notonstage.com',
+  },
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Los Angeles',
@@ -104,24 +114,125 @@ const personSchema = {
   ],
   knowsAbout: [
     'Concert Photography',
-    'Portrait Photography',
-    'Event Photography',
-    'Live Music Photography',
-    'Stylized Portraits',
+    'Tour Photography',
+    'Band Press & EPK Portraits',
+    'Music Festival Coverage',
+    'Live Music Photojournalism',
+    'Commercial Music Buyouts',
   ],
-  description: 'Ben Power is a Los Angeles and San Diego based photographer specializing in live music concert photography, portraiture, and event coverage. He collaborates with musicians, publicists, and management teams in the entertainment industry.',
+  description: 'Ben Power is a Los Angeles and San Diego concert, event, and portrait photographer. He is also the Lead Photographer and Co-Owner of Not On Stage (notonstage.com), an established live music publication.',
 };
 
-// JSON-LD WebSite schema: enables Google Sitelinks Search Box and confirms site identity
+// JSON-LD ProfessionalService / LocalBusiness Schema: high local search visibility & pricing catalog
+const businessSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['ProfessionalService', 'LocalBusiness', 'Photographer'],
+  '@id': 'https://www.benpowerphotography.com/#organization',
+  name: 'Ben Power Photography',
+  url: 'https://www.benpowerphotography.com',
+  image: 'https://www.benpowerphotography.com/og-image.jpg',
+  email: 'contact@benpowerphotography.com',
+  priceRange: '$450 - $2500',
+  currenciesAccepted: 'USD',
+  paymentAccepted: 'Credit Card, Stripe, Invoice, ACH',
+  founder: {
+    '@id': 'https://www.benpowerphotography.com/#person',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Los Angeles',
+    addressRegion: 'CA',
+    addressCountry: 'US',
+  },
+  areaServed: [
+    {
+      '@type': 'AdministrativeArea',
+      name: 'Los Angeles Metropolitan Area',
+    },
+    {
+      '@type': 'AdministrativeArea',
+      name: 'San Diego County',
+    },
+    {
+      '@type': 'AdministrativeArea',
+      name: 'Southern California',
+    },
+    {
+      '@type': 'Country',
+      name: 'United States',
+    },
+  ],
+  sameAs: [
+    'https://www.instagram.com/benpowerphoto',
+    'https://notonstage.com',
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Concert & Portrait Photography Packages',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Turnkey Tour Stop Photo Pack',
+          description: '10 edited hero selects delivered by 8:00 AM next morning, 35+ high-res gallery within 48 hours, full commercial promotional rights, and bonus editorial syndication on Not On Stage.',
+        },
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          priceCurrency: 'USD',
+          minPrice: '650',
+          maxPrice: '900',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Band Press & EPK Portrait Session',
+          description: 'On-location or studio creative shoot in Los Angeles / San Diego for album rollouts, Spotify Canvas, and press releases.',
+        },
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          priceCurrency: 'USD',
+          minPrice: '750',
+          maxPrice: '1200',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Creative Portrait Session',
+          description: 'Editorial portraits, fashion styling, and creative headshots for musicians, models, and creators.',
+        },
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          priceCurrency: 'USD',
+          minPrice: '450',
+          maxPrice: '650',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Festival & Multi-City Tour Retainers',
+          description: 'Dedicated visual coverage across multi-day festivals or full tour runs with express daily deliverables.',
+        },
+      },
+    ],
+  },
+};
+
+// JSON-LD WebSite schema
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Ben Power Photography',
   url: 'https://www.benpowerphotography.com',
-  description: 'Portfolio of Ben Power, a Los Angeles and San Diego concert, event, and portrait photographer.',
+  description: 'Concert tour photography, band press portraits, and visual packages in Los Angeles and San Diego by Ben Power.',
   author: {
-    '@type': 'Person',
-    name: 'Ben Power',
+    '@id': 'https://www.benpowerphotography.com/#person',
   },
 };
 
@@ -136,6 +247,10 @@ export default function RootLayout({ children }) {
         />
         <script
           type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+        />
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
@@ -147,8 +262,22 @@ export default function RootLayout({ children }) {
         <ScrollToTop />
         <footer className="footer">
           <div className="footer-inner">
-            <a href="mailto:contact@benpowerphotography.com" className="footer-email">contact@benpowerphotography.com</a>
-            <div className="footer-copy">© {new Date().getFullYear()} Ben Power Photography. All rights reserved.</div>
+            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
+              <a href="mailto:contact@benpowerphotography.com" className="footer-email">
+                contact@benpowerphotography.com
+              </a>
+              <span style={{ color: 'var(--text-muted)' }}>·</span>
+              <a href="https://notonstage.com" target="_blank" rel="noopener noreferrer" className="footer-email" style={{ color: 'var(--accent)' }}>
+                Not On Stage
+              </a>
+              <span style={{ color: 'var(--text-muted)' }}>·</span>
+              <a href="https://instagram.com/benpowerphoto" target="_blank" rel="noopener noreferrer" className="footer-email">
+                @benpowerphoto
+              </a>
+            </div>
+            <div className="footer-copy">
+              © {new Date().getFullYear()} Ben Power Photography. Los Angeles & San Diego. All rights reserved.
+            </div>
           </div>
         </footer>
         <SpeedInsights />
@@ -157,4 +286,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
