@@ -115,3 +115,18 @@ Following creative review, the entire site was purged of generic "AI SaaS" trope
 - **Next.js Quality & Device Sizing Configuration:**
   - Expanded `deviceSizes` in `next.config.mjs` up to `[... 2048, 2560, 2880, 3840]` so Next.js never caps 1440p or 4K Retina screens.
   - Added `qualities: [75, 85, 90]` and passed `quality={90}` in `HeroBackground.js` to eliminate macroblocking on dark concert gradients.
+
+---
+
+## 7. Hero Load Flash Elimination, Landscape Framing & Kawai Portraits
+
+### Issues Addressed
+1. **Initial Flash of Bibi Image:**
+   - Previous client-side hydration initialized state to `images[0]` (Bibi) before firing a `setTimeout` inside `useEffect` to pick a random image. This caused the browser to download and render Bibi first, then swap to the new random image seconds later.
+   - Fixed by removing client-side delay entirely and enabling `export const dynamic = 'force-dynamic'` in `app/page.js`. The server selects the random hero image on each request and bakes it directly into the initial HTML payload. The browser preloads the chosen image on line 1 with zero flash, zero double-downloading, and zero layout shift.
+2. **Crowd Shot Removal:**
+   - Identified and cut out barricade crowd shots (e.g. Panchiko crowd shots and Glaive crowd shots) from the homepage roller per user request.
+3. **Landscape Concert Framing:**
+   - Replaced portrait-oriented live concert shots with wide 3:2 and 16:9 landscape framing (Ken Carson, Isabel LaRosa, glaive, Tiffany Day, Thee Sacred Souls, Rainbow Kitten Surprise, Yena, Bladee, Cage the Elephant, Wet Leg, X Ambassadors, Maggie Lindemann, Snow Strippers, Skating Polly). This eliminates vertical cropping issues on widescreen desktop and laptop displays.
+4. **Kawai Portraits Preserved:**
+   - Retained all curated Kawai artist portraits (`press-kawai-01.webp`, `press-kawai-13.webp`, `press-kawai-19.webp`, `press-kawai-21.webp`) with top-anchored framing (`objectPosition: 'center 20%'`) to keep facial framing intact.
