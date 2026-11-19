@@ -130,3 +130,21 @@ Following creative review, the entire site was purged of generic "AI SaaS" trope
    - Replaced portrait-oriented live concert shots with wide 3:2 and 16:9 landscape framing (Ken Carson, Isabel LaRosa, glaive, Tiffany Day, Thee Sacred Souls, Rainbow Kitten Surprise, Yena, Bladee, Cage the Elephant, Wet Leg, X Ambassadors, Maggie Lindemann, Snow Strippers, Skating Polly). This eliminates vertical cropping issues on widescreen desktop and laptop displays.
 4. **Kawai Portraits Preserved:**
    - Retained all curated Kawai artist portraits (`press-kawai-01.webp`, `press-kawai-13.webp`, `press-kawai-19.webp`, `press-kawai-21.webp`) with top-anchored framing (`objectPosition: 'center 20%'`) to keep facial framing intact.
+
+---
+
+## 8. Directory Thumbnail Architecture (Matched Framing & 2880px Upscales)
+
+### User Direction
+- Utilize the pre-formatted thumbnail covers from every concert and portrait gallery directory on the site.
+- Preserve the exact landscape framing already tuned on `/work/concerts` (e.g. `bibi-sogang`: `top`, `yena-sogang`: `center 40%`, others: `center`).
+- Remove custom top-anchor offsets on Kawai portraits; use clean standard framing (`center`).
+- Strictly exclude `prom` and `animals` directories.
+- Upscale all directory thumbnails to 2880px master WebP files.
+
+### Implementation
+- Generated 33 master 2880px WebP assets (`public/images/hero/thumb-*.webp`):
+  - 25 concert thumbnails: `glaive`, `tiffany-day`, `isabel-larosa`, `ken-carson`, `bibi-sogang`, `yena-sogang`, `maggie-lindemann`, `snowstrippers`, `party`, `ari`, `bladee`, `malcolm`, `cte`, `wetleg`, `skatingp`, `hinds`, `xambassadors`, `panchiko`, `aron`, `turnover`, `underscores`, `hopetala`, `slowtide-backyard`, `tpb`, `slowtide-bbb`.
+  - 3 non-prom/animal portrait gallery covers: `brooke`, `kendi`, `slowtide`.
+  - 5 full Kawai portraits: `kawai-cover`, `kawai-01`, `kawai-13`, `kawai-19`, `kawai-21` (all with clean standard `center` framing).
+- Verified with `export const dynamic = 'force-dynamic'` for instant first-frame SSR delivery and 0-error ESLint validation.
