@@ -23,70 +23,48 @@ const clientRoster = [
 ];
 
 const heroImages = [
-  { src: '/images/hero/press-bibi-11.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-xambassadors-03.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-party-07.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-kawai-01.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-xambassadors-10.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-bibi-13.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-malcolm-20.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-cte-02.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-yena-13.webp', objectPosition: 'center 40%' },
-  { src: '/images/hero/press-malcolm-19.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-wetleg-11.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-yena-2.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-underscores-02.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-cte-04.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-kawai-21.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-isabel-larosa-1.webp', objectPosition: 'center 30%' },
-  { src: '/images/hero/press-brooke-41.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-xambassadors-09.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-panchiko-15.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-panchiko-14.webp', objectPosition: 'center' },
+  // Live Stage & Concert Performance (Landscape Framing - No Crop Issues)
+  { src: '/images/hero/hero-ken-carson-1.webp', objectPosition: 'center 35%' },
+  { src: '/images/hero/hero-ken-carson-2.webp', objectPosition: 'center 35%' },
+  { src: '/images/hero/hero-ken-carson-3.webp', objectPosition: 'center 40%' },
   { src: '/images/hero/press-isabel-larosa-12.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-isabel-larosa-18.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-isabel-larosa-5.webp', objectPosition: 'center 30%' },
-  { src: '/images/hero/press-snowstrippers-02.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-skatingp-10.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-bibi-9.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-wetleg-10.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-snowstrippers-27.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-hinds-04.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-concerts-01.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-yena-9.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-hinds-03.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-malcolm-06.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-malcolm-11.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-kawai-19.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-kawai-13.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-maggie-lindemann-02.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-bibi-12.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-xambassadors-01.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-wetleg-09.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-maggie-lindemann-21.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-yena-4.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-bladee-13.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-skatingp-09.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-glaive-16.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-glaive-6.webp', objectPosition: 'center 45%' },
-  { src: '/images/hero/press-glaive-7.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-ken-carson-10.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-ken-carson-14.webp', objectPosition: 'center 40%' },
-  { src: '/images/hero/press-ken-carson-18.webp', objectPosition: 'center 30%' },
-  { src: '/images/hero/press-ken-carson-15.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-ken-carson-24.webp', objectPosition: 'center 35%' },
-  { src: '/images/hero/press-ken-carson-8.webp', objectPosition: 'center 35%' },
+  { src: '/images/hero/hero-glaive-1.webp', objectPosition: 'center' },
+  { src: '/images/hero/hero-tiffany-1.webp', objectPosition: 'center' },
   { src: '/images/hero/press-tiffany-day-13.webp', objectPosition: 'center' },
-  { src: '/images/hero/press-tiffany-day-17.webp', objectPosition: 'center 35%' },
+  { src: '/images/hero/hero-thee-sacred-souls.webp', objectPosition: 'center 40%' },
+  { src: '/images/hero/hero-rks.webp', objectPosition: 'center' },
+  { src: '/images/hero/hero-yena.webp', objectPosition: 'center 40%' },
+  { src: '/images/hero/press-yena-13.webp', objectPosition: 'center 40%' },
+  { src: '/images/hero/press-bladee-13.webp', objectPosition: 'center' },
+  { src: '/images/hero/press-cte-landscape.webp', objectPosition: 'center 35%' },
+  { src: '/images/hero/press-wetleg-landscape.webp', objectPosition: 'center 35%' },
+  { src: '/images/hero/press-xambassadors-03.webp', objectPosition: 'center' },
+  { src: '/images/hero/press-maggie-lindemann-02.webp', objectPosition: 'center' },
+  { src: '/images/hero/press-maggie-lindemann-21.webp', objectPosition: 'center' },
+  { src: '/images/hero/press-snowstrippers-27.webp', objectPosition: 'center' },
+  { src: '/images/hero/press-skatingp-10.webp', objectPosition: 'center' },
+  { src: '/images/hero/press-concerts-01.webp', objectPosition: 'center' },
+
+  // Kawai Artist Portraits (Preserved per User Request with Tuned Vertical Anchor)
+  { src: '/images/hero/press-kawai-01.webp', objectPosition: 'center 20%' },
+  { src: '/images/hero/press-kawai-13.webp', objectPosition: 'center 20%' },
+  { src: '/images/hero/press-kawai-19.webp', objectPosition: 'center 25%' },
+  { src: '/images/hero/press-kawai-21.webp', objectPosition: 'center 20%' },
 ];
 
+export const dynamic = 'force-dynamic';
+
 export default function Home() {
+  // eslint-disable-next-line react-hooks/purity
+  const randomIndex = Math.floor(Math.random() * heroImages.length);
+  const randomHero = heroImages[randomIndex];
+
   return (
     <div>
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg">
-          <HeroBackground images={heroImages} />
+          <HeroBackground hero={randomHero} />
         </div>
         <div className="hero-content">
           <p className="hero-subtitle">Los Angeles · San Diego · Worldwide</p>
