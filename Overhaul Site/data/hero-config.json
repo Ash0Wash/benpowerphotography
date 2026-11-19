@@ -27,7 +27,7 @@
     "id": "bibi-sogang-thumb",
     "title": "Bibi @ Sogang",
     "src": "/images/hero/thumb-bibi-sogang.webp",
-    "objectPosition": "top",
+    "objectPosition": "center 11%",
     "category": "Concert",
     "enabled": true
   },
@@ -35,7 +35,7 @@
     "id": "yena-sogang-thumb",
     "title": "Yena @ Sogang",
     "src": "/images/hero/thumb-yena-sogang.webp",
-    "objectPosition": "center 40%",
+    "objectPosition": "center 29%",
     "category": "Concert",
     "enabled": true
   },
@@ -43,7 +43,7 @@
     "id": "maggie-lindemann-thumb",
     "title": "Maggie Lindemann",
     "src": "/images/hero/thumb-maggie-lindemann.webp",
-    "objectPosition": "center",
+    "objectPosition": "center 33%",
     "category": "Concert",
     "enabled": true
   },
@@ -51,7 +51,7 @@
     "id": "hopetala-thumb",
     "title": "Hope Tala",
     "src": "/images/hero/thumb-hopetala.webp",
-    "objectPosition": "center",
+    "objectPosition": "center 36%",
     "category": "Concert",
     "enabled": true
   },
@@ -67,7 +67,7 @@
     "id": "glaive-master",
     "title": "glaive (Stage Master)",
     "src": "/images/hero/hero-glaive-1.webp",
-    "objectPosition": "center",
+    "objectPosition": "bottom",
     "category": "Concert",
     "enabled": true
   },
@@ -147,7 +147,7 @@
     "id": "kendi-portrait",
     "title": "Kendi (Portraits)",
     "src": "/images/hero/thumb-kendi.webp",
-    "objectPosition": "center",
+    "objectPosition": "center 30%",
     "category": "Portrait",
     "enabled": true
   },
@@ -187,7 +187,7 @@
     "id": "kawai-13",
     "title": "Kawai #13",
     "src": "/images/hero/thumb-kawai-13.webp",
-    "objectPosition": "center",
+    "objectPosition": "center 27%",
     "category": "Portrait",
     "enabled": true
   },
@@ -195,7 +195,7 @@
     "id": "kawai-19",
     "title": "Kawai #19",
     "src": "/images/hero/thumb-kawai-19.webp",
-    "objectPosition": "center",
+    "objectPosition": "center 49%",
     "category": "Portrait",
     "enabled": true
   },
@@ -203,7 +203,7 @@
     "id": "kawai-21",
     "title": "Kawai #21",
     "src": "/images/hero/thumb-kawai-21.webp",
-    "objectPosition": "center",
+    "objectPosition": "center 35%",
     "category": "Portrait",
     "enabled": true
   },
@@ -261,7 +261,7 @@
     "src": "/images/hero/thumb-xambassadors.webp",
     "objectPosition": "center",
     "category": "Concert",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "panchiko-thumb",
@@ -269,7 +269,7 @@
     "src": "/images/hero/thumb-panchiko.webp",
     "objectPosition": "center",
     "category": "Concert",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "snowstrippers-thumb",
@@ -277,7 +277,7 @@
     "src": "/images/hero/thumb-snowstrippers.webp",
     "objectPosition": "center",
     "category": "Concert",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "party-thumb",
@@ -285,7 +285,7 @@
     "src": "/images/hero/thumb-party.webp",
     "objectPosition": "center",
     "category": "Concert",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "aron-thumb",
